@@ -5,14 +5,77 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Dela Gothic One', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: rgb(253, 175, 30);
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 2em;
+}
+
+h2 {
+  font-size: 42px;
+}
+
+h3 {
+  font-size: 38px;
+}
+
+h4 {
+  font-size: 34px;
+}
+
+p {
+  font-size: 32px;
+  line-height: 2em;
+}
+
+.icon-scroll, .icon-scroll:before {
+  position: absolute;
+  left: 80%;
+}
+
+.icon-scroll {
+  width: 80px;
+  height: 160px;
+  margin-left: -20px;
+  top: 25%;
+  margin-top: -35px;
+  box-shadow: inset 0 0 0 1px rgb(253, 175, 30);
+  border-radius: 50px;
+  border: 2px solid rgb(253, 175, 30)
+}
+
+.icon-scroll:before {
+  content: '';
+  width: 30px;
+  height: 30px;
+  background: orange;
+  margin-left: -38px;
+  top: 8px;
+  border-radius: 20px;
+  animation-duration: 1.9s;
+  animation-iteration-count: infinite;
+  animation-name: scroll;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 1
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(110px);
+  }
 }

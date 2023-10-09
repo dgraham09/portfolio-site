@@ -1,6 +1,8 @@
 import profile from "../assets/profile.jpg";
 import english from "../assets/english.png";
 import french from "../assets/french.png";
+import technologist from "../assets/technologist.png";
+import LanguagesList from "./LanguagesList";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const Profile = () => {
@@ -21,7 +23,7 @@ const Profile = () => {
         <img src={profile} alt="profile" class="rounded-full mt-4"></img>
         <p class="text-left mt-8 bio-text">
           Former Product Owner who has made the switch to Full Stack development
-          👨‍💻
+          <img src={technologist} class="emoji"></img>
         </p>
         <div class="mt-5 languages-container">
           <h4>Languages:</h4>
@@ -61,13 +63,7 @@ const Profile = () => {
                 a growing skill set in: rails javascript react 🔭
                 <br></br>
                 <br></br>
-                I’m currently working on building full stack web applications in
-                the above languages. Other languages that i am experienced with
-                are:
-                <br></br>
-                <br></br>
-                bootstrap css3 firebase html5 linux mysql postgresql redis redux
-                ruby sass
+                <LanguagesList />
                 <br></br>
                 <br></br>
                 I'm an experienced communicator with senior stakeholders with a

@@ -2,6 +2,8 @@ import profile from "../assets/profile.jpg";
 import english from "../assets/english.png";
 import french from "../assets/french.png";
 import technologist from "../assets/technologist.png";
+import linkedin from "../assets/linkedin.png";
+import github from "../assets/github.png";
 import LanguagesList from "./LanguagesList";
 import { motion, useScroll, useTransform } from "framer-motion";
 
@@ -25,9 +27,26 @@ const Profile = () => {
           Former Product Owner who has made the switch to Full Stack development
           <img src={technologist} class="emoji"></img>
         </p>
+        <div class="flex flex-col details-container">
+          <h4>My details:</h4>
+          <div class="mt-4 flex flex-row justify-start items-center">
+            <img src={linkedin} class="language"></img>
+            <p class="grow text-start ms-8">
+              <a href="https://www.linkedin.com/in/dgraham3/">
+                See my Linkedin here
+              </a>
+            </p>
+          </div>
+          <div class="mt-4 flex flex-row justify-start items-center">
+            <img src={github} class="language"></img>
+            <p class="grow text-start ms-8">
+              <a href="https://github.com/dgraham09">See my Github here</a>
+            </p>
+          </div>
+        </div>
         <div class="mt-5 languages-container">
           <h4>Languages:</h4>
-          <div class="flex-col">
+          <div class="flex flex-col">
             <div class="mt-4 flex flex-row justify-start items-center">
               <img src={english} class="language"></img>
               <p class="grow text-start ms-14">Native</p>

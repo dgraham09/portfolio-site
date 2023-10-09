@@ -76,7 +76,7 @@ p {
   height: 100vh;
 }
 
-.bio-text, .languages-container p{
+.bio-text, .languages-container p, .details-container p{
   font-size: 26px;
 }
 

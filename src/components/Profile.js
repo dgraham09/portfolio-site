@@ -60,16 +60,26 @@ const Profile = () => {
                 Originally from Scotland, I have recently moved to Paris to live
                 with my partner. I have a solid understanding of the attributes
                 needed to work on strategic initiatives in an agile manner with
-                a growing skill set in: rails javascript react 🔭
-                <br></br>
-                <br></br>
+                a growing skill set in:
+                <div class="flex flex-row my-10">
+                  <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rails/rails-original-wordmark.svg"
+                    class="language"
+                  ></img>
+                  <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+                    class="language"
+                  ></img>
+                  <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
+                    class="language"
+                  ></img>
+                </div>
                 <LanguagesList />
-                <br></br>
                 <br></br>
                 I'm an experienced communicator with senior stakeholders with a
                 proven ability to develop strong relationships and work
                 collaboratively and pragmatically across different cultures.
-                <br></br>
                 <br></br>
                 If you are interested in finding out more about me you can find
                 my linkedin and CV here 👉 Click me!

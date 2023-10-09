@@ -9,10 +9,6 @@ const LanguagesList = () => {
       <br></br>
       <div class="flex flex-row">
         <img
-          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rails/rails-original-wordmark.svg"
-          class="language"
-        ></img>
-        <img
           src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg"
           class="language"
         ></img>

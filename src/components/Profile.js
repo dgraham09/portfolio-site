@@ -1,4 +1,6 @@
 import profile from "../assets/profile.jpg";
+import english from "../assets/english.png";
+import french from "../assets/french.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const Profile = () => {
@@ -15,13 +17,29 @@ const Profile = () => {
   );
   return (
     <section class="grid grid-cols-4 gap-7  bg-slate-900 profile">
-      <div class=" ml-12 m-5">
+      <div class="ml-12 m-5 profile-image-container">
         <img src={profile} alt="profile" class="rounded-full mt-4"></img>
-        <p class="text-left mt-8">More info</p>
+        <p class="text-left mt-8 bio-text">
+          Former Product Owner who has made the switch to Full Stack development
+          👨‍💻
+        </p>
+        <div class="mt-5 languages-container">
+          <h4>Languages:</h4>
+          <div class="flex-col">
+            <div class="mt-4 flex flex-row justify-start items-center">
+              <img src={english} class="language"></img>
+              <p class="grow text-start ms-14">Native</p>
+            </div>
+            <div class="mt-4 flex flex-row justify-center items-center">
+              <img src={french} class="language"></img>
+              <p class="grow text-start ms-14">B2: Intermediate</p>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="col-span-3">
         <motion.div style={{ opacity: introOpacity }} class="w-full h-96">
-          <h1 class="text-left mt-14">Hi, my name is David Graham</h1>
+          <h1 class="text-left mt-14">Hi, I'm David. Nice to meet you!</h1>
           <div class="icon-scroll"></div>
           <br />
           <h2 class="text-left w-8/12">

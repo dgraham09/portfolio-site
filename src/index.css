@@ -70,6 +70,21 @@ p {
   animation-name: scroll;
 }
 
+.profile-image-container {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.bio-text, .languages-container p{
+  font-size: 26px;
+}
+
+.language {
+  height: 80px;
+  width: 80px;
+}
+
 @keyframes scroll {
   0% {
     opacity: 1

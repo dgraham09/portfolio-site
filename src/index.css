@@ -43,18 +43,19 @@ p {
 
 .icon-scroll, .icon-scroll:before {
   position: absolute;
-  left: 80%;
+  left: 85%;
 }
 
 .icon-scroll {
   width: 80px;
   height: 160px;
   margin-left: -20px;
-  top: 25%;
-  margin-top: -35px;
+  margin-top: -120px;
   box-shadow: inset 0 0 0 1px rgb(253, 175, 30);
   border-radius: 50px;
-  border: 2px solid rgb(253, 175, 30)
+  border: 2px solid rgb(253, 175, 30);
+  position: sticky;
+  top: 0;
 }
 
 .icon-scroll:before {
@@ -62,7 +63,7 @@ p {
   width: 30px;
   height: 30px;
   background: orange;
-  margin-left: -38px;
+  margin-left: -42px;
   top: 8px;
   border-radius: 20px;
   animation-duration: 1.9s;
@@ -74,6 +75,12 @@ p {
   position: sticky;
   top: 0;
   height: 100vh;
+}
+
+.scroll-container {
+  position: sticky;
+  top: 20vh;
+  left: 85vw;
 }
 
 .bio-text, .languages-container p, .details-container p{

@@ -4,6 +4,7 @@ import french from "../assets/french.png";
 import technologist from "../assets/technologist.png";
 import linkedin from "../assets/linkedin.png";
 import github from "../assets/github.png";
+import gmail from "../assets/gmail.png";
 import LanguagesList from "./LanguagesList";
 import { motion, useScroll, useTransform } from "framer-motion";
 
@@ -27,7 +28,7 @@ const Profile = () => {
           Former Product Owner who has made the switch to Full Stack development
           <img src={technologist} class="emoji"></img>
         </p>
-        <div class="flex flex-col details-container">
+        <div class="flex flex-col details-container mt-1">
           <h4>My details:</h4>
           <div class="mt-4 flex flex-row justify-start items-center">
             <img src={linkedin} class="language"></img>
@@ -41,6 +42,12 @@ const Profile = () => {
             <img src={github} class="language"></img>
             <p class="grow text-start ms-8">
               <a href="https://github.com/dgraham09">See my Github here</a>
+            </p>
+          </div>
+          <div class="mt-4 flex flex-row justify-start items-center">
+            <img src={gmail} class="language"></img>
+            <p class="grow text-start ms-8">
+              <a href="mailto:davidcgraham09@gmail.com">Contact me</a>
             </p>
           </div>
         </div>
@@ -61,19 +68,25 @@ const Profile = () => {
       <div class="col-span-3">
         <motion.div style={{ opacity: introOpacity }} class="w-full h-96">
           <h1 class="text-left mt-14">Hi, I'm David. Nice to meet you!</h1>
-          <div class="icon-scroll"></div>
           <br />
           <h2 class="text-left w-8/12">
             I'm a junior full stack developer with a strong strategic mindset
-            who develops web applications to solve challenging problems{" "}
+            who develops web applications to solve challenging problems.
+            <br></br>
+            <br></br>
+            When I’m not at the computer, I’m usually running or doing some kind
+            of exercise and exploring Paris.
           </h2>
           <br />
           <h2 class="text-left mt-8">Scroll to learn a little more....</h2>
         </motion.div>
+        <div class="scroll-container">
+          <div class="icon-scroll"></div>
+        </div>
         <section class="col-span-3">
           <motion.div style={{ opacity: bioOpacity }} class="w-8/12">
             <p class="text-left">
-              <h3>Hey there 👋</h3>
+              <h3 class="underline">About me</h3>
               <br></br>
               <p>
                 Originally from Scotland, I have recently moved to Paris to live
@@ -99,10 +112,13 @@ const Profile = () => {
                 I'm an experienced communicator with senior stakeholders with a
                 proven ability to develop strong relationships and work
                 collaboratively and pragmatically across different cultures.
-                <br></br>
-                If you are interested in finding out more about me you can find
-                my linkedin and CV here 👉 Click me!
               </p>
+            </p>
+            <br></br>
+          </motion.div>
+          <motion.div>
+            <p class="text-left">
+              <h3 class="underline">Projects</h3>
             </p>
           </motion.div>
         </section>

@@ -1,6 +1,5 @@
 
 import "./App.css";
-import Navbar from "../src/components/Navbar";
 import Profile from "../src/components/Profile";
 
 function App() {

@@ -37,6 +37,10 @@ const Profile = () => {
     setCursorVariant("default");
   };
 
+  const linkEnter = () => {
+    setCursorVariant("link");
+  };
+
   const { scrollY } = useScroll();
   const introOpacity = useTransform(
     scrollY,
@@ -59,13 +63,27 @@ const Profile = () => {
       height: 120,
       width: 120,
       x: mousePosition.x - 60,
-      y: mousePosition.y - 60,
+      y: mousePosition.y - 0,
+      backgroundColor: "rgb(253, 175, 30)",
+      mixBlendMode: "difference",
+    },
+    link: {
+      height: 60,
+      width: 60,
+      x: mousePosition.x - 30,
+      y: mousePosition.y - 30,
       backgroundColor: "rgb(253, 175, 30)",
       mixBlendMode: "difference",
     },
   };
+
+  // bg-slate-900
+  // bg-indigo-800
+  // bg-stone-950
+  // bg-cyan-950
+  // bg-blue-950
   return (
-    <section className="grid grid-cols-4 gap-7  bg-slate-900 profile">
+    <section className="grid grid-cols-4 gap-7  bg-stone-950 profile">
       <motion.div
         className="cursor"
         variants={variants}
@@ -85,7 +103,11 @@ const Profile = () => {
           <h4 className="underline">My details:</h4>
           <div className="mt-4 flex flex-row justify-start items-center">
             <img src={linkedin} className="language"></img>
-            <p className="grow text-start ms-8">
+            <p
+              className="grow text-start ms-8"
+              onMouseEnter={linkEnter}
+              onMouseLeave={textLeave}
+            >
               <a href="https://www.linkedin.com/in/dgraham3/">
                 See my Linkedin here
               </a>
@@ -93,13 +115,21 @@ const Profile = () => {
           </div>
           <div className="mt-4 flex flex-row justify-start items-center">
             <img src={github} className="language"></img>
-            <p className="grow text-start ms-8">
+            <p
+              className="grow text-start ms-8"
+              onMouseEnter={linkEnter}
+              onMouseLeave={textLeave}
+            >
               <a href="https://github.com/dgraham09">See my Github here</a>
             </p>
           </div>
           <div className="mt-4 flex flex-row justify-start items-center">
             <img src={gmail} className="language"></img>
-            <p className="grow text-start ms-8">
+            <p
+              className="grow text-start ms-8"
+              onMouseEnter={linkEnter}
+              onMouseLeave={textLeave}
+            >
               <a href="mailto:davidcgraham09@gmail.com">Contact me</a>
             </p>
           </div>
@@ -142,7 +172,7 @@ const Profile = () => {
         <div className="scroll-container">
           <div className="icon-scroll"></div>
         </div>
-        <section className="col-span-3">
+        <section>
           <motion.div style={{ opacity: bioOpacity }} className="w-8/12">
             <p className="text-left">
               <h3
@@ -154,10 +184,21 @@ const Profile = () => {
               </h3>
               <br></br>
               <p onMouseEnter={textEnter} onMouseLeave={textLeave}>
-                Originally from Scotland, I have recently moved to Paris to live
-                with my partner. I have a solid understanding of the attributes
-                needed to work on strategic initiatives in an agile manner with
-                a growing skill set in:
+                Originally from Scotland, i have recently moved to Paris to be
+                with my partner. Over the last few years having worked for a
+                large financial institution as a Product Owner, I found myself
+                spending more time trying to understand the software solutions
+                that were implemented.
+                <br></br>
+                <br></br>I became greatly interested in how full stack web
+                applications were delivered and I took it upon myself to take
+                time to improve my programming skills learning React and
+                completing Le Wagon in France as I knew I wanted to move into
+                software development.
+                <br></br>
+                <br></br>I have a solid understanding of the attributes needed
+                to work on strategic initiatives in an agile manner with a
+                growing skill set in:
                 <div className="flex flex-row my-10">
                   <img
                     src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rails/rails-original-wordmark.svg"

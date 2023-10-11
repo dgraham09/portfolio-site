@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 * {
   cursor: none;
 }
@@ -38,9 +39,17 @@ h4 {
   font-size: 34px;
 }
 
+h5 {
+  font-size: 30px;
+}
+
 p {
   font-size: 32px;
   line-height: 2em;
+}
+
+a {
+  font-size: 30px;
 }
 
 .icon-scroll, .icon-scroll:before {
@@ -74,9 +83,8 @@ p {
 }
 
 .profile-image-container {
-  /* position: sticky;
-  top: 0;
-  height: 100vh; */
+
+  height: 30vh;
 }
 
 .scroll-container {
@@ -113,11 +121,38 @@ p {
   width: 50vw;
   height: 500px;
   border-radius: 40px;
-  padding: 2em;
+  /* padding: 2em; */
   margin-top: 1em;
   animation: float 5s ease-in-out infinite;
   box-shadow: 4px 4px 15px 2px rgb(253, 175, 30);
 }
+
+.project-thumbnail {
+  min-height: 40.5vh;
+  background-size: cover;
+  background-repeat: no-repeat ;
+  border-radius: 36px;
+
+}
+
+.project-thumbnail img {
+  min-width: 80vw;
+  z-index: -1;
+}
+
+.project-thumbnail.midpoint {
+  background-image: url('../src/assets/midpoint.png');
+}
+
+.project-thumbnail.spaces {
+  background-image: url('../src/assets/spaces.png')
+
+}
+
+.project-thumbnail.movieMinder {
+  background-image: url('../src/assets/movie_minder.png');
+}
+
 
 .cursor {
   background-color: yellow;
@@ -128,7 +163,19 @@ p {
   top: 0;
   left: 0;
   pointer-events: none;
+
 }
+
+a:hover {
+  cursor: pointer;
+}
+
+img:hover {
+  .cursor {
+    z-index: 1;
+  }
+}
+
 
 @keyframes scroll {
   0% {

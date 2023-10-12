@@ -5,6 +5,7 @@ import technologist from "../assets/technologist.png";
 import linkedin from "../assets/linkedin.png";
 import github from "../assets/github.png";
 import gmail from "../assets/gmail.png";
+import cv from "../assets/cv.png";
 import LanguagesList from "./LanguagesList";
 import Projects from "./Projects";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -111,6 +112,16 @@ const Profile = () => {
               <a href="https://www.linkedin.com/in/dgraham3/">
                 See my Linkedin here
               </a>
+            </p>
+          </div>
+          <div className="mt-4 flex flex-row justify-start items-center">
+            <img src={cv} className="language"></img>
+            <p
+              className="grow text-start ms-8"
+              onMouseEnter={linkEnter}
+              onMouseLeave={textLeave}
+            >
+              <a href="#">See my CV here </a>
             </p>
           </div>
           <div className="mt-4 flex flex-row justify-start items-center">

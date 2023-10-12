@@ -138,7 +138,7 @@ a {
 }
 
 .project-thumbnail {
-  min-height: 40.5vh;
+  min-height: 42.7vh;
   background-size: cover;
   background-repeat: no-repeat ;
   border-radius: 36px;
@@ -151,7 +151,7 @@ a {
 }
 
 .view-button {
-  margin: 180px auto;
+  margin: 200px auto;
   background-color: rgb(253, 175, 30);
   color: white;
   height: 3em;
@@ -161,18 +161,19 @@ a {
   transform: scale(0);
   text-align: center;
   font-size: 28px;
+  z-index: 1;
 }
 
 .project-thumbnail:hover {
-  filter: brightness(70%);
+  z-index: -1;
   .view-button {
     transform: scale(1);
     z-index: 1;
   }
 }
 
-.project-thumbnail .view-button:hover {
-  filter: brightness(100%);
+.project-thumbnail .view-button {
+  filter: brightness(100%) !important;
 }
 
 .project-thumbnail.midpoint {
@@ -214,6 +215,18 @@ img:hover {
   .cursor {
     z-index: 1;
   }
+}
+
+.tooltip {
+  background-color: red;
+  display: none;
+}
+
+.tooltip-active {
+  display: block;
+}
+.tooltip-hidden {
+  visibility: hidden;
 }
 
 

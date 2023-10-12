@@ -238,7 +238,7 @@ const Profile = () => {
           <motion.div>
             <p className="text-left">
               <h3 className="underline">Projects</h3>
-              <Projects />
+              <Projects onMouseEnter={linkEnter} onMouseLeave={textLeave} />
             </p>
           </motion.div>
         </section>

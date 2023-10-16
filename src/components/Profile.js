@@ -58,23 +58,23 @@ const Profile = () => {
     default: {
       x: mousePosition.x - 16,
       y: mousePosition.y - 16,
-      backgroundColor: "rgb(253, 175, 30)",
+      backgroundColor: "rgb(206, 67, 159)",
     },
     text: {
       height: 120,
       width: 120,
       x: mousePosition.x - 60,
       y: mousePosition.y - 0,
-      backgroundColor: "rgb(253, 175, 30)",
-      mixBlendMode: "difference",
+      backgroundColor: "rgb(206, 67, 159)",
+      mixBlendMode: "lighten",
     },
     link: {
       height: 60,
       width: 60,
       x: mousePosition.x - 30,
       y: mousePosition.y - 30,
-      backgroundColor: "rgb(253, 175, 30)",
-      mixBlendMode: "difference",
+      backgroundColor: "rgb(206, 67, 159)",
+      mixBlendMode: "lighten",
     },
   };
 
@@ -84,14 +84,14 @@ const Profile = () => {
   // bg-cyan-950
   // bg-blue-950
   return (
-    <section className="grid grid-cols-4 gap-7  bg-stone-950 profile">
+    <section className="grid grid-cols-4 gap-7  bg-blue-950 profile">
       <motion.div
         className="cursor"
         variants={variants}
         animate={cursorVariant}
       ></motion.div>
       <div
-        className="ml-12 m-5 profile-image-container"
+        className="ml-12 m-5 profile-image-container bg-"
         onMouseEnter={textEnter}
         onMouseLeave={textLeave}
       >
@@ -160,13 +160,16 @@ const Profile = () => {
         </div>
       </div>
       <div
-        className="col-span-3"
+        className="col-span-3 ms-20"
         onMouseEnter={textEnter}
         onMouseLeave={textLeave}
       >
         <motion.div style={{ opacity: introOpacity }} className="w-full h-96">
-          <h1 className="text-left mt-14">Hi, I'm David. Nice to meet you!</h1>
-          <br />
+          <div className="intro"></div>
+          <br></br>
+          <br></br>
+          <br></br>
+          <h1 className="text-left mt-24 w-full">Hi, I'm David. Nice to meet you!</h1>
           <p className="text-left w-8/12">
             I'm a junior full stack developer with a strong strategic mindset
             who develops web applications to solve challenging problems.

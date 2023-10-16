@@ -8,14 +8,28 @@
 }
 body {
   margin: 0;
-  font-family: 'Dela Gothic One', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* font-family: 'Dela Gothic One', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: rgb(253, 175, 30);
+  color: white;
+  font-family: 'Arial';
 
 }
+
+.intro {
+  background-color: rgb(143, 55, 250);
+  transform: rotateZ(-2deg) translateY(-12rem) translateX(-1rem);
+  height: 350px;
+  width: 2386px;
+  position: absolute;
+  left: 10.5px;
+
+  z-index: 0;
+}
+
+/* color: rgb(193, 191, 191); */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -64,18 +78,20 @@ a {
   height: 160px;
   margin-left: -20px;
   margin-top: -120px;
-  box-shadow: inset 0 0 0 1px rgb(253, 175, 30);
+  box-shadow: inset 0 0 0 1px rgb(130, 30, 253);;
   border-radius: 50px;
-  border: 2px solid rgb(253, 175, 30);
+  border: 2px solid rgb(130, 30, 253);;
   position: sticky;
   top: 0;
 }
+
+/* rgb(130, 30, 253) */
 
 .icon-scroll:before {
   content: '';
   width: 30px;
   height: 30px;
-  background: orange;
+  background: rgb(130, 30, 253);
   margin-left: -42px;
   top: 8px;
   border-radius: 20px;
@@ -86,6 +102,7 @@ a {
 
 .profile-image-container {
   height: 30vh;
+  z-index: 1;
 }
 
 .scroll-container {
@@ -100,7 +117,7 @@ a {
 }
 
 .details-container, .languages-container {
-  border: 4px solid rgb(253, 175, 30);
+  border: 4px solid rgb(130, 30, 253);
   padding: 2em;
   border-radius: 40px;
 }
@@ -117,20 +134,21 @@ a {
 }
 
 .language {
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
   margin: 4px;
 }
 
 .card {
-  border: 4px solid rgb(253, 175, 30);
+  border: 4px solid rgb(130, 30, 253);
   height: 300px;
   width: 50vw;
   height: 500px;
   border-radius: 40px;
   margin-top: 1em;
   animation: float 4s ease-in-out infinite;
-  box-shadow: 4px 4px 15px 2px rgb(253, 175, 30);
+  box-shadow: 4px 4px 15px 2px rgb(130, 30, 253);
+  z-index: 2;
 }
 
 .card:hover {
@@ -138,21 +156,18 @@ a {
 }
 
 .project-thumbnail {
-  min-height: 42.7vh;
   background-size: cover;
   background-repeat: no-repeat ;
   border-radius: 36px;
+  min-height: 100%;
 
 }
 
-.project-thumbnail img {
-  min-width: 80vw;
-  z-index: -1;
-}
+
 
 .view-button {
   margin: 200px auto;
-  background-color: rgb(253, 175, 30);
+  background-color: rgb(130, 30, 253);
   color: white;
   height: 3em;
   width: 10.5em;
@@ -176,26 +191,27 @@ a {
   filter: brightness(100%) !important;
 }
 
-.project-thumbnail.midpoint {
+.project-thumbnail.Midpoint {
   background-image: url('../src/assets/midpoint.png');
+  min-height: 100%;
 }
 
-.project-thumbnail.spaces {
+.project-thumbnail.Spaces {
   background-image: url('../src/assets/spaces.png')
 
 }
 
-.project-thumbnail.movieMinder {
+.project-thumbnail.MovieMinder {
   background-image: url('../src/assets/movie_minder.png');
 }
 
-.project-thumbnail.findYourHat {
+.project-thumbnail.FindYourHat {
   background-image: url('../src/assets/findYourHat.png')
 }
 
 
 .cursor {
-  background-color: yellow;
+  background-color: rgb(193, 191, 191);
   height: 32px;
   width: 32px;
   border-radius: 50%;
@@ -218,13 +234,21 @@ img:hover {
 }
 
 .tooltip {
-  background-color: red;
+  background-color: rgb(130, 30, 253);
+  color: white;
   display: none;
+  padding: 2em;
 }
 
 .tooltip-active {
-  display: block;
+    position: absolute;
+    left: -500px;
+    top: 200px;
+    display: block;
+  
 }
+
+
 .tooltip-hidden {
   visibility: hidden;
 }
@@ -245,11 +269,11 @@ img:hover {
     transform: translateY(0px)
   }
   50% {
-    box-shadow: 4px 8px 15px 2px rgb(253, 175, 30);
+    box-shadow: 4px 8px 15px 2px rgb(130, 30, 253);
     transform: translateY(-15px)
   }
   100% {
-    box-shadow: 4px 4px 15px 2px rgb(253, 175, 30);
+    box-shadow: 4px 4px 15px 2px rgb(130, 30, 253);
     transform: translateY(0px)
   }
 }

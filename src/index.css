@@ -19,14 +19,23 @@ body {
 }
 
 .intro {
-  background-color: rgb(143, 55, 250);
-  transform: rotateZ(-2deg) translateY(-12rem) translateX(-1rem);
-  height: 350px;
-  width: 2386px;
-  position: absolute;
-  left: 10.5px;
-
+  height: 150px;
+  width: 85%;
+  position: relative;
+  background-color: #007bff;
   z-index: 0;
+}
+
+.intro::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 200px 200px;
+  border-color: transparent transparent #007bff transparent;
+  right: -200px;
+  transform: rotate(90deg);
 }
 
 /* color: rgb(193, 191, 191); */

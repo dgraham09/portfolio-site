@@ -3,19 +3,19 @@
             "id": 1,
             "Name": "Midpoint",
             "Description": "This site is a flight searching site that helps travelers find the best midpoint destinations for meeting up with friends and family",
-            "TechStack": ["JavaScript", "PostgreSQL", "Redis", "Ruby on Rails"]
+            "TechStack": ["JavaScript", "PostgreSQL", "Redis", "Rails"]
         },
         {
             "id": 2, 
             "Name": "Spaces",
             "Description": "A Rails app that can be used to find and book co-working spaces for start ups",
-            "TechStack": ["Ruby on Rails", "JavaScript", "Sidekiq", "Stimulus", "PostgreSQL"]
+            "TechStack": ["Rails", "JavaScript", "PostgreSQL"]
         },
         {
             "id": 3,
             "Name": "MovieMinder",
             "Description": "Web App to help you keep track of and group any movies that you enjoyed",
-            "TechStack": ["Ruby on Rails", "PostgreSQL", "JavaScript", "Stimulus"]
+            "TechStack": ["Rails", "PostgreSQL", "JavaScript"]
         },
         {
             "id": 4,
@@ -24,5 +24,6 @@
             "TechStack": ["NodeJS"]
         }
     ]
+
 
 

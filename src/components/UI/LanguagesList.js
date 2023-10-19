@@ -1,4 +1,4 @@
-import tailwind from "../assets/tailwind.png";
+import tailwind from "../../assets/tailwind.png";
 
 const LanguagesList = () => {
   return (

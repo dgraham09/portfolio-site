@@ -7,6 +7,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./components/error-page.jsx";
 import ProjectData from "./components/data/Projects.json";
 import Project from "./components/Project.jsx";
+import Cursor from "./components/Cursor";
+import { ThemeProvider } from "@material-tailwind/react";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -18,7 +20,9 @@ const router = createBrowserRouter([
   },
   {
     path: "projects/:projectId",
-    element: <Project />,
+    element: (
+      <Project textEnter={Cursor.textEnter} textLeave={Cursor.textLeave} />
+    ),
     loader: ({ params }) => {
       return ProjectData.find((project) => project.id == params.projectId);
     },

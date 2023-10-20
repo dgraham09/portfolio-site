@@ -2,20 +2,38 @@
         {
             "id": 1,
             "Name": "Midpoint",
-            "Description": "This site is a flight searching site that helps travelers find the best midpoint destinations for meeting up with friends and family",
-            "TechStack": ["JavaScript", "PostgreSQL", "Redis", "Rails"]
+            "Description": "This site is a flight searching site that helps travelers find the best midpoint destinations for meeting up with friends and family. The app also shows the cheapest locations as well as the fastest destinations to travel to while showing the travel time split for each traveler",
+            "TechStack": ["JavaScript", "PostgreSQL", "Redis", "Rails"],
+            "Images": [
+                "/images/midpoint/midpoint.png",
+                "/images/midpoint/midpoint_journey_page.png",
+                "/images/midpoint/midpoint_journey2_flights_page.png"
+    
+            ]
         },
         {
             "id": 2, 
             "Name": "Spaces",
             "Description": "A Rails app that can be used to find and book co-working spaces for start ups",
-            "TechStack": ["Rails", "JavaScript", "PostgreSQL"]
+            "TechStack": ["Rails", "JavaScript", "PostgreSQL"],
+            "Images" : [
+                "/images/spaces/spaces.png",
+                "/images/spaces/spaces_page2.png",
+                "/images/spaces/spaces_page3.png",
+                "/images/spaces/spaces_page4.png",
+                "/images/spaces/spaces_page5.png"
+            ]
         },
         {
             "id": 3,
             "Name": "MovieMinder",
             "Description": "Web App to help you keep track of and group any movies that you enjoyed",
-            "TechStack": ["Rails", "PostgreSQL", "JavaScript"]
+            "TechStack": ["Rails", "PostgreSQL", "JavaScript"],
+            "Images": [
+                "/images/movieMinder/movie_minder.png",
+                "/images/movieMinder/movie_minder_search_results.png",
+                "/images/movieMinder/movie_minder_bookmark.png"
+            ]
         },
         {
             "id": 4,
@@ -27,3 +45,4 @@
 
 
 
+ 

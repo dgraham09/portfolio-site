@@ -1,103 +1,73 @@
-import {
-    Carousel,
-    initTE,
-  } from "tw-elements";
-  
-  initTE({ Carousel });
 
+import { Carousel, IconButton } from "@material-tailwind/react";
 
-const CarouselDefault = () => {
-
+const CarouselContainer = (props) => {
     return (
-    <div
-    id="carouselExampleControls"
-    class="relative carousel"
-    data-te-carousel-init
-    data-te-ride="carousel">
+        <div>
+        <Carousel className="carousel"
+              prevArrow={({ handlePrev }) => (
+                <IconButton
+                  variant="text"
+                  color="red"
+                  size="x-lg"
+                  onClick={handlePrev}
+                  className="!absolute left-240 top-200 translate-y-1/4 translate-x-2/4"
+                >
+                  {/* <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={20}
+                    stroke="red"
+                    className="h-7 w-7"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+                    />
+                  </svg> */}
+                </IconButton>
+              )}
+              nextArrow={({ handleNext }) => (
+                <IconButton
+                  variant="text"
+                  color="white"
+                  size="x-lg"
+                  onClick={handleNext}
+                  className="!absolute top-2/4 !right-4 -translate-y-2/4"
+                >
+                  {/* <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="white"
+                    viewBox="0 0 24 24"
+                    strokeWidth={20}
+                    stroke="blue"
+                    className="h-10 w-10"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                    />
+                  </svg> */}
+                </IconButton>)}
+              >
 
-  <div
-    class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
-
-    <div
-      class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-      data-te-carousel-item
-      data-te-carousel-active>
-      <img
-        src={require("../../assets/midpoint/midpoint.png")}
-        class="block w-full"
-        alt="Wild Landscape" />
-    </div>
-
-    <div
-      class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-      data-te-carousel-item>
-      <img
-        src={require("../../assets/midpoint/midpoint_journey_page.png")}
-        class="block w-full"
-        alt="Camera" />
-    </div>
-
-    <div
-      class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-      data-te-carousel-item>
-      <img
-        src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp"
-        class="block w-full"
-        alt="Exotic Fruits" />
-    </div>
-  </div>
-
-  <button
-    class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-    type="button"
-    data-te-target="#carouselExampleControls"
-    data-te-slide="prev">
-    <span class="inline-block h-8 w-8">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth="1.5"
-        stroke="currentColor"
-        class="h-6 w-6 direction-arrows">
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M15.75 19.5L8.25 12l7.5-7.5" />
-      </svg>
-    </span>
-    <span
-      class="!absolute !-m-px !h-px !w-px !overflow-hidden text-white !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)] direction-arrows"
-      >Previous</span
-    >
-  </button>
-
-  <button
-    class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none "
-    type="button"
-    data-te-target="#carouselExampleControls"
-    data-te-slide="next">
-    <span class="inline-block h-8 w-8">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth="1.5"
-        stroke="currentColor"
-        class="h-6 w-6 direction-arrows">
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M8.25 4.5l7.5 7.5-7.5 7.5" 
-         />
-      </svg>
-    </span>
-    <span
-      class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
-      >Next</span
-    >
-  </button>
-</div>
-)}
-
-export default CarouselDefault
+                {props.project.Images.map((image) => {
+                    return (
+                        <div className="h-4/5 w-screen rounded-xl">
+                            <img
+                            src={image}
+                            alt="image 1"
+                            className="h-4/5 w-screen"
+                            />
+                        </div>
+                    )
+                })}
+        </Carousel>
+      </div>
+    );
+  }
+  
+  export default CarouselContainer

@@ -2,7 +2,9 @@ import Profile from "../src/components/Profile";
 import Cursor from "./components/Cursor";
 import CursorContextProvider from "./components/CursorContext";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/UI/ScrollToTop";
 import { useState, useEffect, createContext } from "react";
+
 function App() {
   const [mousePosition, setMousePosition] = useState({
     x: 0,

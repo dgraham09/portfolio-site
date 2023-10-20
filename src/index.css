@@ -199,10 +199,36 @@ a {
   margin: 1.5em auto;
 }
 
+.projectInfoCard button {
+  position: absolute !important;
+  top: 400px;
+}
+
 .carousel img {
+  height: 50em;
+  width: 130em;
+  margin-top: 3em;
+  background-size: contain;
+  /* border-radius: 2em; */
+
+  /* margin: 2em; */
+}
+
+.cursor-pointer {
+  background-color: rgb(206, 67, 159);
+  height: 2em;
+  width: 2em;
+  margin: 0 0.5em 8em 0.5em;
+  /* position: absolute !important;
+  top: 42em;
+  height: 7em;
+  width: 7em; */
+}
+
+/* .carousel img {
   height: 40em;
   width: 70em;
-}
+} */
 
 /* #carouselExampleControls {
   padding: 1em;
@@ -271,17 +297,17 @@ a {
 }
 
 .project-thumbnail.Midpoint {
-  background-image: url('../src/assets/midpoint/midpoint.png');
+  background-image: url('../public/images/midpoint/midpoint.png');
   min-height: 100%;
 }
 
 .project-thumbnail.Spaces {
-  background-image: url('../src/assets/spaces.png')
+  background-image: url('../public/images/spaces/spaces.png')
 
 }
 
 .project-thumbnail.MovieMinder {
-  background-image: url('../src/assets/movie_minder.png');
+  background-image: url('../public/images/movieMinder/movie_minder.png');
 }
 
 .project-thumbnail.FindYourHat {

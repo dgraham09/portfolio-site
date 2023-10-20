@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./components/error-page.jsx";
 import ProjectData from "./components/data/Projects.json";
 import Project from "./components/Project.jsx";
+import ScrollToTop from "./components/UI/ScrollToTop";
 import Cursor from "./components/Cursor";
 import { ThemeProvider } from "@material-tailwind/react";
 
@@ -21,7 +22,9 @@ const router = createBrowserRouter([
   {
     path: "projects/:projectId",
     element: (
-      <Project textEnter={Cursor.textEnter} textLeave={Cursor.textLeave} />
+      <ScrollToTop>
+        <Project textEnter={Cursor.textEnter} textLeave={Cursor.textLeave} />
+      </ScrollToTop>
     ),
     loader: ({ params }) => {
       return ProjectData.find((project) => project.id == params.projectId);

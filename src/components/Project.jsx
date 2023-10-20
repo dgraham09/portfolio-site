@@ -8,6 +8,7 @@ import { CursorContext } from "./CursorContext";
 import TechnologyList from "./UI/TechnologyList";
 import Carousel from "./UI/Carousel";
 import Footer from "./Footer";
+import ScrollToTop from "./UI/ScrollToTop";
 
 const Project = (props) => {
     // const [setCursorVariant] = useContext(CursorContext)
@@ -20,11 +21,12 @@ const Project = (props) => {
                     <Link to={"/"}>See source code</Link>
                     <div class="flex flex-col justify-center">
                         <h1>{`${project.Name}`}</h1>
-                        <Carousel />
+                        <Carousel project={project}/>
                         <p>{`${project.Description}`}</p>
                         <TechnologyList languages={project.TechStack}/>
                     </div>
                 </div>
+                {/* <ScrollToTop/> */}
                 <Footer />
         </div>
     )

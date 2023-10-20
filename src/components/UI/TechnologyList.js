@@ -1,11 +1,10 @@
 const TechnologyList = (props) => {
-  console.log(props.languages);
   return (
     <ul className="project-languages">
       <h5>Built with:</h5>
-      {props.languages.map((language) => {
+      {props.languages.map((language, index) => {
         return (
-          <li className="rounded-full">
+          <li className="rounded-full" key={index}>
             <img
               src={`https://raw.githubusercontent.com/devicons/devicon/master/icons/${language.toLowerCase()}/${language.toLowerCase()}-original${
                 language.toLowerCase() === "rails" ? "-wordmark" : ""

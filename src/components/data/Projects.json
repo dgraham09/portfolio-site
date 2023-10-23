@@ -7,7 +7,9 @@
             "Images": [
                 "/images/midpoint/midpoint.png",
                 "/images/midpoint/midpoint_journey_page.png",
-                "/images/midpoint/midpoint_journey2_flights_page.png"
+                "/images/midpoint/midpoint_journey2_page.png",
+                "/images/midpoint/midpoint_journey2_flights_page.png",
+                "/images/midpoint/midpoint_journey_price_page.png"
     
             ]
         },
@@ -32,14 +34,18 @@
             "Images": [
                 "/images/movieMinder/movie_minder.png",
                 "/images/movieMinder/movie_minder_search_results.png",
-                "/images/movieMinder/movie_minder_bookmark.png"
+                "/images/movieMinder/movie_minder_bookmark.png",
+                "/images/movieMinder/movie_minder_movie_summary.png"
             ]
         },
         {
             "id": 4,
             "Name": "FindYourHat",
             "Description": "A fun terminal game where a user is tasked with finding their hat while avoiding hidden holes!",
-            "TechStack": ["NodeJS"]
+            "TechStack": ["NodeJS"],
+            "Images": [
+                "/images/findhat/findYourHat.png"
+            ]
         }
     ]
 

@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
+import "./index.scss";
 import App from "./App";
+import { routes } from "./routes/index.js";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./components/error-page.jsx";
@@ -11,32 +12,59 @@ import ScrollToTop from "./components/UI/ScrollToTop";
 import Cursor from "./components/Cursor";
 import { ThemeProvider } from "@material-tailwind/react";
 
+// Layouts;
+import DefaultLayout from "../src/layout/default";
+
+// Pages
+import Home from "../src/pages/Home";
+import Projects from "../src/pages/Projects";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <App />,
+//     errorElement: <ErrorPage />,
+//   },
+//   // {
+//   //   path: "projects/:projectId",
+//   //   element: (
+//   //     <ScrollToTop>
+//   //       <Project textEnter={Cursor.textEnter} textLeave={Cursor.textLeave} />
+//   //     </ScrollToTop>
+//   //   ),
+//   //   loader: ({ params }) => {
+//   //     return ProjgectData.find((project) => project.id == params.projectId);
+//   //   },
+//   // },
+// ]);
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Home />,
     errorElement: <ErrorPage />,
   },
   {
     path: "projects/:projectId",
-    element: (
-      <ScrollToTop>
-        <Project textEnter={Cursor.textEnter} textLeave={Cursor.textLeave} />
-      </ScrollToTop>
-    ),
+    element: <Project />,
     loader: ({ params }) => {
       return ProjectData.find((project) => project.id == params.projectId);
     },
+    //   element: (
+    //     <ScrollToTop>
+    //       <Project textEnter={Cursor.textEnter} textLeave={Cursor.textLeave} />
+    //     </ScrollToTop>
+    //   ),
+    //   loader: ({ params }) => {
+    //     return ProjgectData.find((project) => project.id == params.projectId);
+    //   },
   },
 ]);
-
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router}>
-      <App />
-    </RouterProvider>
+    <RouterProvider router={router}></RouterProvider>
   </React.StrictMode>
 );
 

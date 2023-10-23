@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+// Required Core Stylesheet
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
+// Optional Theme Stylesheet
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
 
 .App {
   cursor: none;
@@ -181,7 +187,7 @@ a {
   background-color: rgb(99, 23, 192);
 }
 
-.projectInfoCard li {
+.project-languages li {
   display: inline-block;
   background-color: rgb(206, 67, 159);
   height: 8em;
@@ -193,26 +199,56 @@ a {
   box-shadow: 2px 4px 7px 1px rgb(130, 30, 253)
 }
 
-.projectInfoCard img {
+.project-languages img {
   height: 5em;
   width: 5em;
   margin: 1.5em auto;
-}
+} 
 
-.projectInfoCard button {
+/* .projectInfoCard button {
   position: absolute !important;
   top: 400px;
+} */
+
+.glide {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-.carousel img {
-  height: 50em;
-  width: 130em;
-  margin-top: 3em;
-  background-size: contain;
-  /* border-radius: 2em; */
 
-  /* margin: 2em; */
+
+.glide__slide {
+  text-align: center;
+  height: 70vh;
+  min-width: 350px;
+  line-height: 150px;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 900;
 }
+
+.glide__slide img {
+  height: 70vh;
+}
+
+.glide__arrows {
+  padding: 5px;
+}
+
+.glide__arrow {
+  position: relative;
+  top: 0;
+  margin: 20px;
+  transform: none;
+  left: 0;
+  right: 0;
+  padding: 8px;
+  background-color: rgb(206, 67, 159);
+  transition: all 0.2s ease-in-out;
+}
+
+
 
 .cursor-pointer {
   background-color: rgb(206, 67, 159);
@@ -225,10 +261,10 @@ a {
   width: 7em; */
 }
 
-/* .carousel img {
-  height: 40em;
-  width: 70em;
-} */
+// .carousel img {
+//   height: 40em;
+//   width: 70em;
+// } 
 
 /* #carouselExampleControls {
   padding: 1em;
@@ -284,6 +320,8 @@ a {
   z-index: 1;
 }
 
+
+
 .project-thumbnail:hover {
   z-index: -1;
   .view-button {
@@ -311,7 +349,7 @@ a {
 }
 
 .project-thumbnail.FindYourHat {
-  background-image: url('../src/assets/findYourHat.png')
+  background-image: url('../public/images/findhat/findYourHat.png')
 }
 
 .cursor {
@@ -337,25 +375,6 @@ img:hover {
   }
 }
 
-.tooltip {
-  background-color: rgb(130, 30, 253);
-  color: white;
-  display: none;
-  padding: 2em;
-}
-
-.tooltip-active {
-    position: absolute;
-    left: -500px;
-    top: 200px;
-    display: block;
-  
-}
-
-
-.tooltip-hidden {
-  visibility: hidden;
-}
 
 .footer {
   height: 12vh;

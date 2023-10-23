@@ -24,14 +24,9 @@ const Profile = (props) => {
     [0, 0.2, 0.4, 0.6, 0.8, 1]
   );
   return (
-    <div className="bg-blue-950">
-      <header className="bg-blue-950">
-        <div class="h-10"></div>
-        <div className="intro"></div>
-      </header>
       <main>
         <div className="grid grid-cols-4 gap-4 profile">
-          <aside>
+          <aside class="h-full">
             <div
               className="ml-12 m-5 profile-image-container bg-"
               onMouseEnter={props.textEnter}
@@ -213,7 +208,6 @@ const Profile = (props) => {
           </section>
         </div>
       </main>
-    </div>
 
     // <section className="grid grid-cols-4 gap-7  bg-blue-950 profile">
     //

@@ -60,18 +60,11 @@ function App() {
   };
   return (
     <div>
-      <CursorContextProvider>
-        <div className="App bg-blue-950 min-h-screen">
-          <Profile
-            textEnter={textEnter}
-            textLeave={textLeave}
-            linkEnter={linkEnter}
-            cursorVariant={cursorVariant}
-            variants={variants}
-          />
-        </div>
-      </CursorContextProvider>
-      <Footer />
+      {/* <CursorContextProvider> */}
+      <ScrollToTop>
+        <main className="App bg-blue-950 min-h-screen" />
+      </ScrollToTop>
+      {/* </CursorContextProvider> */}
     </div>
   );
 }

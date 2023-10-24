@@ -9,7 +9,7 @@ import cv from "../assets/cv.png";
 import LanguagesList from "./UI/LanguagesList";
 import Projects from "./Projects";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 
 const Profile = (props) => {
   const { scrollY } = useScroll();
@@ -23,6 +23,66 @@ const Profile = (props) => {
     [90, 150, 210, 280, 320, 360],
     [0, 0.2, 0.4, 0.6, 0.8, 1]
   );
+
+  // const cursor = useContext(CursorContext);
+
+  // console.log(cursor);
+
+  // const location = useLocation();
+
+  // const [mousePosition, setMousePosition] = useState({
+  //   x: 0,
+  //   y: 0,
+  // });
+
+  // const [cursorVariant, setCursorVariant] = useState("default");
+
+  // const mouseMove = (e) => {
+  //   setMousePosition({ x: e.clientX, y: e.clientY });
+  // };
+
+  // useEffect(() => {
+  //   window.addEventListener("mousemove", mouseMove);
+  //   return () => {
+  //     window.removeEventListener("mousemove", mouseMove);
+  //   };
+  // }, [location]);
+
+  // const props.textEnter = () => {
+  //   setCursorVariant("text");
+  // };
+
+  // const props.textLeave = () => {
+  //   setCursorVariant("default");
+  // };
+
+  // const props.linkEnter = () => {
+  //   setCursorVariant("link");
+  // };
+
+  // const variants = {
+  //   default: {
+  //     x: mousePosition.x - 16,
+  //     y: mousePosition.y - 16,
+  //     backgroundColor: "rgb(206, 67, 159)",
+  //   },
+  //   text: {
+  //     height: 120,
+  //     width: 120,
+  //     x: mousePosition.x - 60,
+  //     y: mousePosition.y - 0,
+  //     backgroundColor: "rgb(206, 67, 159)",
+  //     mixBlendMode: "lighten",
+  //   },
+  //   link: {
+  //     height: 60,
+  //     width: 60,
+  //     x: mousePosition.x - 30,
+  //     y: mousePosition.y - 30,
+  //     backgroundColor: "rgb(206, 67, 159)",
+  //     mixBlendMode: "lighten",
+  //   },
+  // };
   return (
     <main>
       <div className="grid grid-cols-4 gap-4 profile">
@@ -206,10 +266,6 @@ const Profile = (props) => {
         </section>
       </div>
     </main>
-
-    // <section className="grid grid-cols-4 gap-7  bg-blue-950 profile">
-    //
-    // </section>
   );
 };
 

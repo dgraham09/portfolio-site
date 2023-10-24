@@ -14,13 +14,14 @@ import Header from "./Header";
 const Project = (props) => {
     // const [setCursorVariant] = useContext(CursorContext)
     const project = useLoaderData();
+
     return (
-        <div className="bg-blue-950 min-h-full m-2">
+        <div className="bg-blue-950 min-h-full m-2 projectPage">
             <Header/>
             <ScrollToTop/>
                 <div className="projectInfoCard">
                     <Link to={"/"}>Go back to home</Link>
-                    <Link to={"/"}>See source code</Link>
+                    <Link to={`https://github.com/dgraham09/${project.Name}`}>See source code</Link>
                     <div class="flex flex-col justify-center">
                         <h1>{`${project.Name}`}</h1>
                         <CarouselContainer project={project}/>

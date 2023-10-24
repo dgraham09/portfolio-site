@@ -28,7 +28,7 @@
         },
         {
             "id": 3,
-            "Name": "MovieMinder",
+            "Name": "Movie-Minder",
             "Description": "Web App to help you keep track of and group any movies that you enjoyed",
             "TechStack": ["Rails", "PostgreSQL", "JavaScript"],
             "Images": [

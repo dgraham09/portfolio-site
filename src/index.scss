@@ -8,14 +8,16 @@
 // Optional Theme Stylesheet
 @import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
 
-* {
-  border: 1px solid red;
-}
+// * {
+//   border: 1px solid red;
+// }
 
 
-.App {
+main {
   cursor: none;
 }
+
+
 body {
   margin: 0;
   /* font-family: 'Dela Gothic One', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -45,7 +47,7 @@ body {
   border-style: solid;
   border-width: 0 0 200px 100px;
   border-color: transparent transparent rgb(130, 30, 253) transparent;
-  right: -150px;
+  right: -149.5px;
   top: -50px;
   transform: rotate(90deg);
 }
@@ -140,7 +142,7 @@ a {
 
 .details-container, .languages-container {
   border: 4px solid rgb(130, 30, 253);
-  padding: 2em;
+  padding: 1.5em;
   border-radius: 40px;
 }
 
@@ -234,6 +236,7 @@ a {
 
 .glide__slide img {
   height: 70vh;
+  width: 60vw;
 }
 
 .glide__arrows {
@@ -348,7 +351,7 @@ a {
 
 }
 
-.project-thumbnail.MovieMinder {
+.project-thumbnail.Movie-Minder {
   background-image: url('../public/images/movieMinder/movie_minder.png');
 }
 
@@ -461,7 +464,7 @@ img:hover {
   }
 
   .details-container, .languages-container {
-    padding: 3em;
+    padding: 1.5em;
   }
 
   .details-container p {

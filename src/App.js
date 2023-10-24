@@ -1,27 +1,34 @@
-import Profile from "../src/components/Profile";
+import Profile from "./components/Profile";
 import Cursor from "./components/Cursor";
-import CursorContextProvider from "./components/CursorContext";
+import CursorContextProvider, {
+  CursorContext,
+} from "./components/CursorContext";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/UI/ScrollToTop";
 import { useState, useEffect, createContext } from "react";
+import { useLocation } from "react-router-dom";
+import Home from "./components/Home";
 
-function App() {
+function AppLayout({ children }) {
   const [mousePosition, setMousePosition] = useState({
     x: 0,
     y: 0,
   });
+
+  // const location = useLocation();
 
   const [cursorVariant, setCursorVariant] = useState("default");
 
   const mouseMove = (e) => {
     setMousePosition({ x: e.clientX, y: e.clientY });
   };
+
   useEffect(() => {
     window.addEventListener("mousemove", mouseMove);
     return () => {
       window.removeEventListener("mousemove", mouseMove);
     };
-  });
+  }, []);
 
   const textEnter = () => {
     setCursorVariant("text");
@@ -60,13 +67,20 @@ function App() {
   };
   return (
     <div>
-      {/* <CursorContextProvider> */}
-      <ScrollToTop>
-        <main className="App bg-blue-950 min-h-screen" />
-      </ScrollToTop>
-      {/* </CursorContextProvider> */}
+      <CursorContextProvider>
+        <ScrollToTop />
+        <Cursor />
+        <main className="App bg-blue-950 min-h-screen">{children}</main>
+        {/* <Profile
+          textEnter={textEnter}
+          textLeave={textLeave}
+          linkEnter={linkEnter}
+          cursorVariant={cursorVariant}
+          variants={variants}
+        /> */}
+      </CursorContextProvider>
     </div>
   );
 }
 
-export default App;
+export default AppLayout;

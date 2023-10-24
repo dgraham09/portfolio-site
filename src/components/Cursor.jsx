@@ -1,11 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, createContext } from "react";
+import { useLocation } from "react-router-dom";
 
+export const CursorContext = createContext();
 
 const Cursor = () => {
         const [mousePosition, setMousePosition] = useState({
           x: 0,
           y: 0,
         });
+
+        // const location = useLocation();
       
         const [cursorVariant, setCursorVariant] = useState("default");
       

@@ -133,7 +133,7 @@ const Profile = (props) => {
                   onMouseEnter={props.linkEnter}
                   onMouseLeave={props.textLeave}
                 >
-                  <a href="https://github.com/dgraham09">See my Github here</a>
+                  <a href="#">See my Github here</a>
                 </p>
               </div>
               <div className="mt-4 flex flex-row justify-start items-center">

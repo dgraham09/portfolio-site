@@ -7,7 +7,7 @@ const LanguagesList = () => {
       languages. Other languages that i am experienced with are:
       <br></br>
       <br></br>
-      <div class="flex flex-row">
+      <div class="flex flex-row languages-list-container">
         <img
           src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg"
           class="language"

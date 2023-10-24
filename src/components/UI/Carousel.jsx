@@ -10,20 +10,14 @@ import Glide from '@glidejs/glide'
 
 const CarouselContainer = (props) => {
 
-  let slider = document.querySelector(".glide")
-
-  if (slider) {
-      let slider = new Glide('.glide', {
-        perView: 1,
-      })
-
-  }
-
   useEffect(() => {
-    if(slider) {
-      return () => slider.mount()
-    }
-  }, [slider])
+    
+  let slider = new Glide('.glide', {
+    perView: 1,
+})
+
+  slider.mount()
+  }, [])
   
 
   return (

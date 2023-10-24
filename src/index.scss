@@ -8,6 +8,10 @@
 // Optional Theme Stylesheet
 @import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
 
+* {
+  border: 1px solid red;
+}
+
 
 .App {
   cursor: none;
@@ -336,7 +340,7 @@ a {
 
 .project-thumbnail.Midpoint {
   background-image: url('../public/images/midpoint/midpoint.png');
-  min-height: 100%;
+  background-position: center;
 }
 
 .project-thumbnail.Spaces {
@@ -430,4 +434,279 @@ img:hover {
     box-shadow: 2px 2px 7px 1px rgb(130, 30, 253);
     transform: translateY(0px)
   }
+}
+
+@media only screen and (min-width: 1244px) and (max-width: 1600px) {
+
+  .languages-list-container img {
+    height: 2em;
+    width: 2em;
+  }
+
+  .profile a {
+    font-size: 21px;
+  };
+
+  .languages-container {
+    font-size: 14px;
+  };
+
+  .languages-container img {
+    height: 3em;
+    width: 3em;
+  }
+
+  .project-thumbnail {
+    height: 8em;
+  }
+
+  .details-container, .languages-container {
+    padding: 3em;
+  }
+
+  .details-container p {
+    // font-size: 
+    line-height: 1.5em;
+  }
+
+  .languages-container p {
+    font-size: 1.2em;
+  }
+
+  .project-languages {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 1244px) {
+
+  .languages-list-container img {
+    height: 2em;
+    width: 2em;
+  }
+
+  .intro {
+    width: 65%
+  }
+
+  h4 {
+    font-size: 28px;
+
+  }
+
+  p, .bio-text, a {
+    font-size: 24px;
+  };
+
+  .details-container {
+    width: 20vw;
+  }
+
+}
+
+@media only screen and (min-width: 964px) and (max-width: 1226px) {
+  .details-container, .languages-container {
+    padding: 0.25em;
+  }
+
+  .details-container a, .languages-container a {
+    font-size: 16px;
+  }
+
+  .language {
+    height: 1.8em;
+    width: 1.8em;
+  }
+
+
+}
+
+@media only screen and (max-width: 964px) {
+  .languages-list-container img {
+    height: 1em;
+    width: 1em;
+  }
+
+  h1 {
+    font-size: 34px;
+  };
+
+  h3 {
+    font-size: 28px;
+  }
+
+  h4 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  .project-thumbnail {
+    height: 10em;
+    width: 20em;
+    min-height: fit-content;
+  }
+
+  .card {
+    height: 10em;
+    width: 20em;
+  }
+
+  .bio-text, .details-container a {
+    font-size: 12px;
+  }
+
+  .languages-container p {
+    font-size: 14px;
+  
+  }
+
+  .language {
+    height: 1.65em;
+    width: 1.65em;
+  }
+
+  .details-container p {
+    line-height: 1.75em;
+    font-size: 12px;
+  }
+
+
+
+  .details-container a {
+    font-size: 12px;
+    line-height: 0.5em;
+  }
+
+  .project-languages li {
+    height: 6em;
+    width: 6em;
+  }
+
+  .emoji {
+    height: 3em;
+    width: 3em;
+  }
+
+}
+
+@media only screen and (max-width: 870px) {
+  .glide {
+    display: none;
+  }
+
+  .projectInfoCard a {
+    display: block;
+  }
+
+  .project-languages li {
+    height: 4em;
+    width: 4em;
+  }
+
+  .project-languages img {
+    height: 2em;
+    width: 2em;
+    margin: 0.8em auto;
+  }
+
+  .projectInfoCard a {
+    height: 3em;
+    margin: 0.5em;
+    font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 615px) {
+  .project-thumbnail {
+    height: 6em;
+    width: 10em;
+    min-height: fit-content;
+  }
+
+  .view-button {
+    height:2em;
+    width: 5em;
+  }
+
+
+  aside {
+    width: 10em;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  .card {
+    height: 6em;
+    width: 10em;
+  }
+
+  .intro {
+    width: 25%
+  }
+
+  .languages-list-container {
+    flex-wrap: wrap;
+  }
+
+  .scroll-container {
+    display: none;
+  }
+
+  .details-container, .languages-container {
+    display: none;
+  }
+
+  .project-languages {
+    padding: 0;
+  }
+
+  .project-languages h5 {
+    font-size: 16px;
+  }
+
+  .project-languages img {
+    height: 1.5em;
+    width: 1.5em;
+    margin: 0.6em auto;
+  }
+
+  .project-languages li {
+    height: 1.5em;
+    width: 1.5em;
+}
+}
+
+@media only screen and (max-width: 493px) {
+
+  .project-languages {
+    display: none;
+  }
+
+  .projectInfoCard {
+    margin: 0;
+  }
+
+  .projectInfoCard a {
+    height: 6em;
+    width: 12em;
+    font-size: 0.5em;
+    margin: 1em;
+}
 }

@@ -11,92 +11,83 @@ import Projects from "./Projects";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useState, useEffect, useContext } from "react";
 
-const Profile = (props) => {
+const Profile = () => {
   const { scrollY } = useScroll();
   const introOpacity = useTransform(
     scrollY,
     [0, 5, 25, 50, 75, 80],
-    [1, 0.8, 0.6, 0.4, 0.2, 0]
+    [1, 0.8, 0.6, 0.4, 0.2, 0],
   );
   const bioOpacity = useTransform(
     scrollY,
     [90, 150, 210, 280, 320, 360],
-    [0, 0.2, 0.4, 0.6, 0.8, 1]
+    [0, 0.2, 0.4, 0.6, 0.8, 1],
   );
 
-  // const cursor = useContext(CursorContext);
-
-  // console.log(cursor);
+  const [mousePosition, setMousePosition] = useState({
+    x: 0,
+    y: 0,
+  });
 
   // const location = useLocation();
 
-  // const [mousePosition, setMousePosition] = useState({
-  //   x: 0,
-  //   y: 0,
-  // });
+  const [cursorVariant, setCursorVariant] = useState("default");
 
-  // const [cursorVariant, setCursorVariant] = useState("default");
+  const mouseMove = (e) => {
+    setMousePosition({ x: e.clientX, y: e.clientY });
+  };
 
-  // const mouseMove = (e) => {
-  //   setMousePosition({ x: e.clientX, y: e.clientY });
-  // };
+  useEffect(() => {
+    window.addEventListener("mousemove", mouseMove);
+    return () => {
+      window.removeEventListener("mousemove", mouseMove);
+    };
+  }, []);
 
-  // useEffect(() => {
-  //   window.addEventListener("mousemove", mouseMove);
-  //   return () => {
-  //     window.removeEventListener("mousemove", mouseMove);
-  //   };
-  // }, [location]);
+  const textEnter = () => {
+    setCursorVariant("text");
+  };
 
-  // const props.textEnter = () => {
-  //   setCursorVariant("text");
-  // };
+  const textLeave = () => {
+    setCursorVariant("default");
+  };
 
-  // const props.textLeave = () => {
-  //   setCursorVariant("default");
-  // };
+  const linkEnter = () => {
+    setCursorVariant("link");
+  };
 
-  // const props.linkEnter = () => {
-  //   setCursorVariant("link");
-  // };
-
-  // const variants = {
-  //   default: {
-  //     x: mousePosition.x - 16,
-  //     y: mousePosition.y - 16,
-  //     backgroundColor: "rgb(206, 67, 159)",
-  //   },
-  //   text: {
-  //     height: 120,
-  //     width: 120,
-  //     x: mousePosition.x - 60,
-  //     y: mousePosition.y - 0,
-  //     backgroundColor: "rgb(206, 67, 159)",
-  //     mixBlendMode: "lighten",
-  //   },
-  //   link: {
-  //     height: 60,
-  //     width: 60,
-  //     x: mousePosition.x - 30,
-  //     y: mousePosition.y - 30,
-  //     backgroundColor: "rgb(206, 67, 159)",
-  //     mixBlendMode: "lighten",
-  //   },
-  // };
+  const variants = {
+    default: {
+      x: mousePosition.x - 16,
+      y: mousePosition.y - 16,
+      backgroundColor: "rgb(206, 67, 159)",
+    },
+    text: {
+      height: 120,
+      width: 120,
+      x: mousePosition.x - 60,
+      y: mousePosition.y - 0,
+      backgroundColor: "rgb(206, 67, 159)",
+      mixBlendMode: "lighten",
+    },
+    link: {
+      height: 60,
+      width: 60,
+      x: mousePosition.x - 30,
+      y: mousePosition.y - 30,
+      backgroundColor: "rgb(206, 67, 159)",
+      mixBlendMode: "lighten",
+    },
+  };
   return (
     <main>
       <div className="grid grid-cols-4 gap-4 profile">
         <aside class="h-full">
           <div
             className="ml-12 m-5 profile-image-container bg-"
-            onMouseEnter={props.textEnter}
-            onMouseLeave={props.textLeave}
+            onMouseEnter={textEnter}
+            onMouseLeave={textLeave}
           >
-            <img
-              src={profile}
-              alt="profile"
-              className="rounded-full mt-4"
-            ></img>
             <p className="text-left mt-8 bio-text">
               Former Product Owner who has made the switch to Full Stack
               development
@@ -108,20 +99,18 @@ const Profile = (props) => {
                 <img src={linkedin} className="language"></img>
                 <p
                   className="grow text-start ms-8"
-                  onMouseEnter={props.linkEnter}
-                  onMouseLeave={props.textLeave}
+                  onMouseEnter={linkEnter}
+                  onMouseLeave={textLeave}
                 >
-                  <a href="https://www.linkedin.com/in/dgraham3/">
-                    See my Linkedin here
-                  </a>
+                  <a href="">See my Linkedin here</a>
                 </p>
               </div>
               <div className="mt-4 flex flex-row justify-start items-center">
                 <img src={cv} className="language"></img>
                 <p
                   className="grow text-start ms-8"
-                  onMouseEnter={props.linkEnter}
-                  onMouseLeave={props.textLeave}
+                  onMouseEnter={linkEnter}
+                  onMouseLeave={textLeave}
                 >
                   <a href="#">See my CV here </a>
                 </p>
@@ -130,8 +119,8 @@ const Profile = (props) => {
                 <img src={github} className="language"></img>
                 <p
                   className="grow text-start ms-8"
-                  onMouseEnter={props.linkEnter}
-                  onMouseLeave={props.textLeave}
+                  onMouseEnter={linkEnter}
+                  onMouseLeave={textLeave}
                 >
                   <a href="#">See my Github here</a>
                 </p>
@@ -140,10 +129,10 @@ const Profile = (props) => {
                 <img src={gmail} className="language"></img>
                 <p
                   className="grow text-start ms-8"
-                  onMouseEnter={props.linkEnter}
-                  onMouseLeave={props.textLeave}
+                  onMouseEnter={linkEnter}
+                  onMouseLeave={textLeave}
                 >
-                  <a href="mailto:davidcgraham09@gmail.com">Contact me</a>
+                  <a href="">Contact me</a>
                 </p>
               </div>
             </div>
@@ -165,29 +154,23 @@ const Profile = (props) => {
         <section class="col-start-2 col-end-10">
           <motion.div
             className="cursor"
-            variants={props.variants}
-            animate={props.cursorVariant}
+            variants={variants}
+            animate={cursorVariant}
           ></motion.div>
           <div
             className="col-span-3 ms-20"
-            onMouseEnter={props.textEnter}
-            onMouseLeave={props.textLeave}
+            onMouseEnter={textEnter}
+            onMouseLeave={textLeave}
           >
             <motion.div
               style={{ opacity: introOpacity }}
               className="w-full h-96"
             >
-              <h1 className="text-left mt-24 w-full">
-                Hi, I'm David. Nice to meet you!
-              </h1>
+              <h1 className="text-left mt-24 w-full">Nice to meet you!</h1>
               <p className="text-left w-8/12">
                 I'm a junior full stack developer with a strong strategic
                 mindset who develops web applications to solve challenging
                 problems.
-              </p>
-              <p class="text-left w-8/12">
-                When I’m not at the computer, I’m usually running or doing some
-                kind of exercise and exploring Paris.
               </p>
               <p className="text-left mt-8">
                 Scroll to learn a little more....
@@ -201,20 +184,16 @@ const Profile = (props) => {
                 <p className="text-left">
                   <h3
                     className="underline"
-                    onMouseEnter={props.textEnter}
-                    onMouseLeave={props.textLeave}
+                    onMouseEnter={textEnter}
+                    onMouseLeave={textLeave}
                   >
                     About me
                   </h3>
-                  <p
-                    onMouseEnter={props.textEnter}
-                    onMouseLeave={props.textLeave}
-                  >
-                    Originally from Scotland, i have recently moved to Paris to
-                    be with my partner. Over the last few years having worked
-                    for a large financial institution as a Product Owner, I
-                    found myself spending more time trying to understand the
-                    software solutions that were implemented.
+                  <p onMouseEnter={textEnter} onMouseLeave={textLeave}>
+                    Over the last few years having worked for a large financial
+                    institution as a Product Owner, I found myself spending more
+                    time trying to understand the software solutions that were
+                    implemented.
                     <p class="mt-10">
                       {" "}
                       I became greatly interested in how full stack web
@@ -255,10 +234,7 @@ const Profile = (props) => {
               <motion.div>
                 <p className="text-left">
                   <h3 className="underline">Projects</h3>
-                  <Projects
-                    onMouseEnter={props.linkEnter}
-                    onMouseLeave={props.textLeave}
-                  />
+                  <Projects onMouseEnter={linkEnter} onMouseLeave={textLeave} />
                 </p>
               </motion.div>
             </section>

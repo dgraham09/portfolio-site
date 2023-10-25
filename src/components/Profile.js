@@ -85,8 +85,8 @@ const Profile = () => {
         <aside class="h-full">
           <div
             className="ml-12 m-5 profile-image-container bg-"
-            onMouseEnter={textEnter}
-            onMouseLeave={textLeave}
+            // onMouseEnter={textEnter}
+            // onMouseLeave={textLeave}
           >
             <p className="text-left mt-8 bio-text">
               Former Product Owner who has made the switch to Full Stack
@@ -99,8 +99,8 @@ const Profile = () => {
                 <img src={linkedin} className="language"></img>
                 <p
                   className="grow text-start ms-8"
-                  onMouseEnter={linkEnter}
-                  onMouseLeave={textLeave}
+                  // onMouseEnter={linkEnter}
+                  // onMouseLeave={textLeave}
                 >
                   <a href="">See my Linkedin here</a>
                 </p>
@@ -109,8 +109,8 @@ const Profile = () => {
                 <img src={cv} className="language"></img>
                 <p
                   className="grow text-start ms-8"
-                  onMouseEnter={linkEnter}
-                  onMouseLeave={textLeave}
+                  // onMouseEnter={linkEnter}
+                  // onMouseLeave={textLeave}
                 >
                   <a href="#">See my CV here </a>
                 </p>
@@ -119,8 +119,8 @@ const Profile = () => {
                 <img src={github} className="language"></img>
                 <p
                   className="grow text-start ms-8"
-                  onMouseEnter={linkEnter}
-                  onMouseLeave={textLeave}
+                  // onMouseEnter={linkEnter}
+                  // onMouseLeave={textLeave}
                 >
                   <a href="#">See my Github here</a>
                 </p>
@@ -129,8 +129,8 @@ const Profile = () => {
                 <img src={gmail} className="language"></img>
                 <p
                   className="grow text-start ms-8"
-                  onMouseEnter={linkEnter}
-                  onMouseLeave={textLeave}
+                  // onMouseEnter={linkEnter}
+                  // onMouseLeave={textLeave}
                 >
                   <a href="">Contact me</a>
                 </p>
@@ -155,8 +155,8 @@ const Profile = () => {
 
           <div
             className="col-span-3 ms-20"
-            onMouseEnter={textEnter}
-            onMouseLeave={textLeave}
+            // onMouseEnter={textEnter}
+            // onMouseLeave={textLeave}
           >
             <motion.div
               style={{ opacity: introOpacity }}
@@ -180,12 +180,15 @@ const Profile = () => {
                 <p className="text-left">
                   <h3
                     className="underline"
-                    onMouseEnter={textEnter}
-                    onMouseLeave={textLeave}
+                    // onMouseEnter={textEnter}
+                    // onMouseLeave={textLeave}
                   >
                     About me
                   </h3>
-                  <p onMouseEnter={textEnter} onMouseLeave={textLeave}>
+                  <p 
+                  // onMouseEnter={textEnter} 
+                  // onMouseLeave={textLeave}
+                  >
                     Over the last few years having worked for a large financial
                     institution as a Product Owner, I found myself spending more
                     time trying to understand the software solutions that were
@@ -230,7 +233,10 @@ const Profile = () => {
               <motion.div>
                 <p className="text-left">
                   <h3 className="underline">Projects</h3>
-                  <Projects onMouseEnter={linkEnter} onMouseLeave={textLeave} />
+                  <Projects 
+                  // onMouseEnter={linkEnter} 
+                  // onMouseLeave={textLeave} 
+                  />
                 </p>
               </motion.div>
             </section>

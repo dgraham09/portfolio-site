@@ -1,5 +1,6 @@
 import { useState, useEffect, createContext } from "react";
 import { useLocation } from "react-router-dom";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export const CursorContext = createContext();
 
@@ -60,6 +61,13 @@ const Cursor = () => {
     },
   };
 
+  return (
+    <motion.div
+      className="cursor"
+      variants={variants}
+      animate={cursorVariant}
+    ></motion.div>
+  );
 };
 
 export default Cursor;

@@ -9,9 +9,11 @@ import cv from "../assets/cv.png";
 import LanguagesList from "./UI/LanguagesList";
 import Projects from "./Projects";
 import DavidGrahamCV from "../components/data/DavidGrahamCV.pdf";
+import { useTranslation, Trans } from "react-i18next";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const Profile = () => {
+  const { t, i18n } = useTranslation();
   const { scrollY } = useScroll();
   const introOpacity = useTransform(
     scrollY,
@@ -24,6 +26,11 @@ const Profile = () => {
     [0, 0.2, 0.4, 0.6, 0.8, 1]
   );
 
+  const lngs = {
+    en: { nativeName: "English" },
+    fr: { nativeName: "French" },
+  };
+
   return (
     <main>
       <div className="grid grid-cols-4 gap-4 profile">
@@ -34,9 +41,22 @@ const Profile = () => {
               alt="profile"
               className="rounded-full mt-4"
             ></img>
+            <div>
+              {Object.keys(lngs).map((lng) => (
+                <button
+                  type="submit"
+                  key={lng}
+                  onClick={() => i18n.changeLanguage(lng)}
+                  disabled={i18n.resolvedLanguage === lng}
+                  className="m-8"
+                >
+                  {lngs[lng].nativeName}
+                </button>
+              ))}
+            </div>
+
             <p className="text-left mt-8 bio-text">
-              Former Product Owner who has made the switch to Full Stack
-              development
+              {t("summary")}
               <img src={technologist} className="emoji" alt="emoji"></img>
             </p>
             <div className="flex flex-col details-container mt-1">
@@ -49,7 +69,7 @@ const Profile = () => {
                 ></img>
                 <p className="grow text-start ms-8">
                   <a href="https://www.linkedin.com/in/dgraham3/">
-                    See my Linkedin here
+                    {t("linkedin")}
                   </a>
                 </p>
               </div>
@@ -62,29 +82,29 @@ const Profile = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    See my CV here{" "}
+                    {t("cv")}
                   </a>
                 </p>
               </div>
               <div className="mt-4 flex flex-row justify-start items-center">
                 <img src={github} className="language" alt="github"></img>
                 <p className="grow text-start ms-8">
-                  <a href="https://github.com/dgraham09">See my Github here</a>
+                  <a href="https://github.com/dgraham09">{t("github")}</a>
                 </p>
               </div>
               <div className="mt-4 flex flex-row justify-start items-center">
                 <img src={gmail} className="language" alt="gmail"></img>
                 <p className="grow text-start ms-8">
-                  <a href="mailto:davidcgraham09@gmail.com">Contact me</a>
+                  <a href="mailto:davidcgraham09@gmail.com">{t("contact")}</a>
                 </p>
               </div>
             </div>
             <div className="mt-5 languages-container">
-              <h4 className="underline">Languages:</h4>
+              <h4 className="underline">{t("languages")}:</h4>
               <div className="flex flex-col">
                 <div className="mt-4 flex flex-row justify-start items-center">
                   <img src={english} className="language" alt="english"></img>
-                  <p className="grow text-start ms-8">Native</p>
+                  <p className="grow text-start ms-8">{t("native")}</p>
                 </div>
                 <div className="mt-4 flex flex-row justify-center items-center">
                   <img src={french} className="language" alt="french"></img>
@@ -100,21 +120,9 @@ const Profile = () => {
               style={{ opacity: introOpacity }}
               className="w-full h-96"
             >
-              <h1 className="text-left mt-24 w-full">
-                Hi, I'm David. Nice to meet you!
-              </h1>
-              <p className="text-left w-8/12">
-                I'm a junior full stack developer with a strong strategic
-                mindset who develops web applications to solve challenging
-                problems.
-              </p>
-              <p class="text-left w-8/12">
-                When I’m not at the computer, I’m usually running or doing some
-                kind of exercise and exploring Paris.
-              </p>
-              <p className="text-left mt-8">
-                Scroll to learn a little more....
-              </p>
+              <h1 className="text-left mt-24 w-full">{t("intro")}</h1>
+              <p className="text-left w-8/12">{t("profile")}</p>
+              <p className="text-left mt-8">{t("scroll")}</p>
             </motion.div>
             <div className="scroll-container">
               <div className="icon-scroll"></div>
@@ -122,56 +130,35 @@ const Profile = () => {
             <section>
               <motion.div style={{ opacity: bioOpacity }} className="w-8/12">
                 <p className="text-left">
-                  <h3 className="underline">About me</h3>
-                  <p>
-                    Originally from Scotland, i have recently moved to Paris to
-                    be with my partner. Over the last few years having worked
-                    for a large financial institution as a Product Owner, I
-                    found myself spending more time trying to understand the
-                    software solutions that were implemented.
-                    <p class="mt-10">
-                      {" "}
-                      I became greatly interested in how full stack web
-                      applications were delivered and I took it upon myself to
-                      take time to improve my programming skills learning React
-                      and completing Le Wagon in France as I knew I wanted to
-                      move into software development.
-                    </p>
-                    <p class="mt-10">
-                      I have a solid understanding of the attributes needed to
-                      work on strategic initiatives in an agile manner with a
-                      growing skill set in:
-                      <div className="flex flex-row my-10">
-                        <img
-                          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rails/rails-original-wordmark.svg"
-                          className="language"
-                          alt="rails"
-                        ></img>
-                        <img
-                          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
-                          className="language"
-                          alt="javascript"
-                        ></img>
-                        <img
-                          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
-                          className="language"
-                          alt="react"
-                        ></img>
-                      </div>
-                    </p>
-                    <LanguagesList />
-                    <p class="mt-10">
-                      I'm an experienced communicator with senior stakeholders
-                      with a proven ability to develop strong relationships and
-                      work collaboratively and pragmatically across different
-                      cultures.
-                    </p>
-                  </p>
+                  <h3 className="underline my-6">{t("aboutMe")}</h3>
+                  <p>{t("experience")}</p>
+                  <p class="mt-10"> {t("interest")}</p>
+                  <p class="mt-10">{t("attributes")}</p>
+                  <div className="flex flex-row my-10">
+                    <img
+                      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rails/rails-original-wordmark.svg"
+                      className="language"
+                      alt="rails"
+                    ></img>
+                    <img
+                      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+                      className="language"
+                      alt="javascript"
+                    ></img>
+                    <img
+                      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
+                      className="language"
+                      alt="react"
+                    ></img>
+                  </div>
+
+                  <LanguagesList />
+                  <p class="mt-10">{t("relationships")}</p>
                 </p>
               </motion.div>
               <motion.div>
                 <p className="text-left">
-                  <h3 className="underline">Projects</h3>
+                  <h3 className="underline my-10">{t("project")}</h3>
                   <Projects />
                 </p>
               </motion.div>

@@ -8,6 +8,7 @@ import ProjectData from "./components/data/Projects.json";
 import Project from "./components/Project.jsx";
 import Home from "../src/pages/Home";
 import AppLayout from "./App";
+import "./i18n";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

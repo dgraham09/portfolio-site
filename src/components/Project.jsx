@@ -4,6 +4,7 @@ import CarouselContainer from "./UI/Carousel";
 import Footer from "./Footer";
 import ScrollToTop from "./UI/ScrollToTop";
 import Header from "./Header";
+import { useTranslation, Trans } from "react-i18next";
 
 
 const Project = () => {

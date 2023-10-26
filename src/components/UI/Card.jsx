@@ -1,4 +1,3 @@
-import finalPropsSelectorFactory from "react-redux/es/connect/selectorFactory";
 
 const Card = (props) => {
     return (

@@ -1,46 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.scss";
-import App from "./App";
-import { routes } from "./routes/index.js";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./components/error-page.jsx";
 import ProjectData from "./components/data/Projects.json";
 import Project from "./components/Project.jsx";
-import ScrollToTop from "./components/UI/ScrollToTop";
-import Cursor from "./components/Cursor";
-import CursorContextProvider from "./components/CursorContext";
-import { ThemeProvider } from "@material-tailwind/react";
-
-// Layouts;
-import DefaultLayout from "../src/layout/default";
-
-// Pages
 import Home from "../src/pages/Home";
-import Projects from "../src/pages/Projects";
 import AppLayout from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-// const router = createBrowserRouter([
-//   {
-//     path: "/",
-//     element: <App />,
-//     errorElement: <ErrorPage />,
-//   },
-//   // {
-//   //   path: "projects/:projectId",
-//   //   element: (
-//   //     <ScrollToTop>
-//   //       <Project textEnter={Cursor.textEnter} textLeave={Cursor.textLeave} />
-//   //     </ScrollToTop>
-//   //   ),
-//   //   loader: ({ params }) => {
-//   //     return ProjgectData.find((project) => project.id == params.projectId);
-//   //   },
-//   // },
-// ]);
 
 const router = createBrowserRouter([
   {
@@ -54,14 +23,6 @@ const router = createBrowserRouter([
     loader: ({ params }) => {
       return ProjectData.find((project) => project.id == params.projectId);
     },
-    //   element: (
-    //     <ScrollToTop>
-    //       <Project textEnter={Cursor.textEnter} textLeave={Cursor.textLeave} />
-    //     </ScrollToTop>
-    //   ),
-    //   loader: ({ params }) => {
-    //     return ProjgectData.find((project) => project.id == params.projectId);
-    //   },
   },
 ]);
 root.render(

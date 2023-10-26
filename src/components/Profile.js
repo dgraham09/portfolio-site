@@ -8,10 +8,10 @@ import gmail from "../assets/gmail.png";
 import cv from "../assets/cv.png";
 import LanguagesList from "./UI/LanguagesList";
 import Projects from "./Projects";
+import DavidGrahamCV from "../components/data/DavidGrahamCV.pdf";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useState, useEffect, useContext } from "react";
 
-const Profile = (props) => {
+const Profile = () => {
   const { scrollY } = useScroll();
   const introOpacity = useTransform(
     scrollY,
@@ -24,74 +24,11 @@ const Profile = (props) => {
     [0, 0.2, 0.4, 0.6, 0.8, 1]
   );
 
-  // const cursor = useContext(CursorContext);
-
-  // console.log(cursor);
-
-  // const location = useLocation();
-
-  // const [mousePosition, setMousePosition] = useState({
-  //   x: 0,
-  //   y: 0,
-  // });
-
-  // const [cursorVariant, setCursorVariant] = useState("default");
-
-  // const mouseMove = (e) => {
-  //   setMousePosition({ x: e.clientX, y: e.clientY });
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener("mousemove", mouseMove);
-  //   return () => {
-  //     window.removeEventListener("mousemove", mouseMove);
-  //   };
-  // }, [location]);
-
-  // const props.textEnter = () => {
-  //   setCursorVariant("text");
-  // };
-
-  // const props.textLeave = () => {
-  //   setCursorVariant("default");
-  // };
-
-  // const props.linkEnter = () => {
-  //   setCursorVariant("link");
-  // };
-
-  // const variants = {
-  //   default: {
-  //     x: mousePosition.x - 16,
-  //     y: mousePosition.y - 16,
-  //     backgroundColor: "rgb(206, 67, 159)",
-  //   },
-  //   text: {
-  //     height: 120,
-  //     width: 120,
-  //     x: mousePosition.x - 60,
-  //     y: mousePosition.y - 0,
-  //     backgroundColor: "rgb(206, 67, 159)",
-  //     mixBlendMode: "lighten",
-  //   },
-  //   link: {
-  //     height: 60,
-  //     width: 60,
-  //     x: mousePosition.x - 30,
-  //     y: mousePosition.y - 30,
-  //     backgroundColor: "rgb(206, 67, 159)",
-  //     mixBlendMode: "lighten",
-  //   },
-  // };
   return (
     <main>
       <div className="grid grid-cols-4 gap-4 profile">
         <aside class="h-full">
-          <div
-            className="ml-12 m-5 profile-image-container bg-"
-            onMouseEnter={props.textEnter}
-            onMouseLeave={props.textLeave}
-          >
+          <div className="ml-12 m-5 profile-image-container bg-">
             <img
               src={profile}
               alt="profile"
@@ -100,49 +37,44 @@ const Profile = (props) => {
             <p className="text-left mt-8 bio-text">
               Former Product Owner who has made the switch to Full Stack
               development
-              <img src={technologist} className="emoji"></img>
+              <img src={technologist} className="emoji" alt="emoji"></img>
             </p>
             <div className="flex flex-col details-container mt-1">
               <h4 className="underline">My details:</h4>
               <div className="mt-4 flex flex-row justify-start items-center">
-                <img src={linkedin} className="language"></img>
-                <p
-                  className="grow text-start ms-8"
-                  onMouseEnter={props.linkEnter}
-                  onMouseLeave={props.textLeave}
-                >
+                <img
+                  src={linkedin}
+                  className="language"
+                  alt="linkedin icon"
+                ></img>
+                <p className="grow text-start ms-8">
                   <a href="https://www.linkedin.com/in/dgraham3/">
                     See my Linkedin here
                   </a>
                 </p>
               </div>
               <div className="mt-4 flex flex-row justify-start items-center">
-                <img src={cv} className="language"></img>
-                <p
-                  className="grow text-start ms-8"
-                  onMouseEnter={props.linkEnter}
-                  onMouseLeave={props.textLeave}
-                >
-                  <a href="#">See my CV here </a>
+                <img src={cv} className="language" alt="cv"></img>
+                <p className="grow text-start ms-8">
+                  <a
+                    href={DavidGrahamCV}
+                    download="David Graham CV"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    See my CV here{" "}
+                  </a>
                 </p>
               </div>
               <div className="mt-4 flex flex-row justify-start items-center">
-                <img src={github} className="language"></img>
-                <p
-                  className="grow text-start ms-8"
-                  onMouseEnter={props.linkEnter}
-                  onMouseLeave={props.textLeave}
-                >
+                <img src={github} className="language" alt="github"></img>
+                <p className="grow text-start ms-8">
                   <a href="https://github.com/dgraham09">See my Github here</a>
                 </p>
               </div>
               <div className="mt-4 flex flex-row justify-start items-center">
-                <img src={gmail} className="language"></img>
-                <p
-                  className="grow text-start ms-8"
-                  onMouseEnter={props.linkEnter}
-                  onMouseLeave={props.textLeave}
-                >
+                <img src={gmail} className="language" alt="gmail"></img>
+                <p className="grow text-start ms-8">
                   <a href="mailto:davidcgraham09@gmail.com">Contact me</a>
                 </p>
               </div>
@@ -151,11 +83,11 @@ const Profile = (props) => {
               <h4 className="underline">Languages:</h4>
               <div className="flex flex-col">
                 <div className="mt-4 flex flex-row justify-start items-center">
-                  <img src={english} className="language"></img>
+                  <img src={english} className="language" alt="english"></img>
                   <p className="grow text-start ms-8">Native</p>
                 </div>
                 <div className="mt-4 flex flex-row justify-center items-center">
-                  <img src={french} className="language"></img>
+                  <img src={french} className="language" alt="french"></img>
                   <p className="grow text-start ms-8">B2: Intermediate</p>
                 </div>
               </div>
@@ -163,16 +95,7 @@ const Profile = (props) => {
           </div>
         </aside>
         <section class="col-start-2 col-end-10">
-          <motion.div
-            className="cursor"
-            variants={props.variants}
-            animate={props.cursorVariant}
-          ></motion.div>
-          <div
-            className="col-span-3 ms-20"
-            onMouseEnter={props.textEnter}
-            onMouseLeave={props.textLeave}
-          >
+          <div className="col-span-3 ms-20">
             <motion.div
               style={{ opacity: introOpacity }}
               className="w-full h-96"
@@ -199,17 +122,8 @@ const Profile = (props) => {
             <section>
               <motion.div style={{ opacity: bioOpacity }} className="w-8/12">
                 <p className="text-left">
-                  <h3
-                    className="underline"
-                    onMouseEnter={props.textEnter}
-                    onMouseLeave={props.textLeave}
-                  >
-                    About me
-                  </h3>
-                  <p
-                    onMouseEnter={props.textEnter}
-                    onMouseLeave={props.textLeave}
-                  >
+                  <h3 className="underline">About me</h3>
+                  <p>
                     Originally from Scotland, i have recently moved to Paris to
                     be with my partner. Over the last few years having worked
                     for a large financial institution as a Product Owner, I
@@ -231,14 +145,17 @@ const Profile = (props) => {
                         <img
                           src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rails/rails-original-wordmark.svg"
                           className="language"
+                          alt="rails"
                         ></img>
                         <img
                           src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
                           className="language"
+                          alt="javascript"
                         ></img>
                         <img
                           src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
                           className="language"
+                          alt="react"
                         ></img>
                       </div>
                     </p>
@@ -255,10 +172,7 @@ const Profile = (props) => {
               <motion.div>
                 <p className="text-left">
                   <h3 className="underline">Projects</h3>
-                  <Projects
-                    onMouseEnter={props.linkEnter}
-                    onMouseLeave={props.textLeave}
-                  />
+                  <Projects />
                 </p>
               </motion.div>
             </section>

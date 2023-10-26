@@ -4,7 +4,7 @@ const Footer = () => {
         <h5>Made with</h5>
         <img
             src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
-            className="language inline m-4"
+            className="language inline m-4" alt="react"
         ></img>
     </div>
     )

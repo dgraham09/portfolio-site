@@ -2,7 +2,6 @@ import i18next from "i18next";
 import { initReactI18next } from "react-i18next";
 
 i18next.use(initReactI18next).init({
-  debug: true,
   fallbackLng: "en",
   resources: {
     en: {
@@ -32,14 +31,16 @@ i18next.use(initReactI18next).init({
         languages: "Languages",
         native: "Native",
         click: "Click to view",
-        made: "Made with",
+        made: "Built with",
+        home: "Go back to home",
+        source: "See source code",
       },
     },
     fr: {
       translation: {
         summary:
           "Ancien Chef de Produit qui est passé au développement Full Stack",
-        intro: "Bonjour, je m'appelle David. Enchanté de vous rencontrer !",
+        intro: "Bonjour, je m'appelle David.\nEnchanté de vous rencontrer !",
         profile:
           "Je suis un développeur junior avec une mentalité plus stratégique qui développe des applications web pour résoudre des problèmes. Lorsque je ne suis pas devant l'ordinateur, je suis généralement en train de courir, de faire de l'exercice ou d'explorer Paris.",
         scroll: "Faites défiler l'écran pour en savoir plus....",
@@ -63,6 +64,8 @@ i18next.use(initReactI18next).init({
         native: "Natif",
         click: "En savoir plus",
         made: "Fabriqué avec",
+        home: "Retour",
+        source: "Voir code source",
       },
     },
   },

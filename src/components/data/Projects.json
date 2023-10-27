@@ -3,6 +3,7 @@
             "id": 1,
             "Name": "Midpoint",
             "Description": "This site is a flight searching site that helps travelers find the best midpoint destinations for meeting up with friends and family. The app also shows the cheapest locations as well as the fastest destinations to travel to while showing the travel time split for each traveler",
+            "DescriptionFR": "Ce site est un site de recherche de vols qui aide les voyageurs à trouver les meilleures destinations intermédiaires pour se retrouver entre amis ou en famille. L'application indique également les lieux les moins chers ainsi que les destinations les plus rapides tout en montrant la durée du voyage pour chaque voyageur.",
             "TechStack": ["JavaScript", "PostgreSQL", "Redis", "Rails"],
             "Images": [
                 "/images/midpoint/midpoint.png",
@@ -17,6 +18,7 @@
             "id": 2, 
             "Name": "Spaces",
             "Description": "A Rails app that can be used to find and book co-working spaces for start ups",
+            "DescriptionFR": "Bonjour",
             "TechStack": ["Rails", "JavaScript", "PostgreSQL"],
             "Images" : [
                 "/images/spaces/spaces.png",

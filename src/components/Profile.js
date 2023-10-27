@@ -10,6 +10,7 @@ import LanguagesList from "./UI/LanguagesList";
 import Projects from "./Projects";
 import DavidGrahamCV from "../components/data/DavidGrahamCV.pdf";
 import { useTranslation, Trans } from "react-i18next";
+import LanguageSwitcher from "./LanguageSwitch";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const Profile = () => {
@@ -26,10 +27,10 @@ const Profile = () => {
     [0, 0.2, 0.4, 0.6, 0.8, 1]
   );
 
-  const lngs = {
-    en: { nativeName: "English" },
-    fr: { nativeName: "French" },
-  };
+  // const lngs = {
+  //   en: { nativeName: "English" },
+  //   fr: { nativeName: "French" },
+  // };
 
   return (
     <main>
@@ -41,20 +42,6 @@ const Profile = () => {
               alt="profile"
               className="rounded-full mt-4"
             ></img>
-            <div>
-              {Object.keys(lngs).map((lng) => (
-                <button
-                  type="submit"
-                  key={lng}
-                  onClick={() => i18n.changeLanguage(lng)}
-                  disabled={i18n.resolvedLanguage === lng}
-                  className="m-8"
-                >
-                  {lngs[lng].nativeName}
-                </button>
-              ))}
-            </div>
-
             <p className="text-left mt-8 bio-text">
               {t("summary")}
               <img src={technologist} className="emoji" alt="emoji"></img>
@@ -120,10 +107,11 @@ const Profile = () => {
               style={{ opacity: introOpacity }}
               className="w-full h-96"
             >
-              <h1 className="text-left mt-24 w-full">{t("intro")}</h1>
+              <h1 className="text-left mt-24 my-12  w-full">{t("intro")}</h1>
               <p className="text-left w-8/12">{t("profile")}</p>
               <p className="text-left mt-8">{t("scroll")}</p>
             </motion.div>
+            <LanguageSwitcher />
             <div className="scroll-container">
               <div className="icon-scroll"></div>
             </div>

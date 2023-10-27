@@ -57,7 +57,6 @@ const LanguageSwitcher = () => {
             variant="secondary"
             id="dropdown-flags"
             className="text-left dropdownToggle"
-            style={{ width: 300 }}
           >
             <span class={`fi fi-${language} mx-2 flagIcon`}></span>
           </Dropdown.Toggle>

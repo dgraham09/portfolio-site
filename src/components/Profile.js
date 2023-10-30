@@ -9,7 +9,7 @@ import cv from "../assets/cv.png";
 import LanguagesList from "./UI/LanguagesList";
 import Projects from "./Projects";
 import DavidGrahamCV from "../components/data/DavidGrahamCV.pdf";
-import { useTranslation, Trans } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitch";
 import { motion, useScroll, useTransform } from "framer-motion";
 
@@ -26,11 +26,6 @@ const Profile = () => {
     [90, 150, 210, 280, 320, 360],
     [0, 0.2, 0.4, 0.6, 0.8, 1]
   );
-
-  // const lngs = {
-  //   en: { nativeName: "English" },
-  //   fr: { nativeName: "French" },
-  // };
 
   return (
     <main>

@@ -34,6 +34,7 @@ i18next.use(initReactI18next).init({
         made: "Built with",
         home: "Go back to home",
         source: "See source code",
+        site: "See site",
       },
     },
     fr: {
@@ -66,6 +67,7 @@ i18next.use(initReactI18next).init({
         made: "Fabriqué avec",
         home: "Retour",
         source: "Voir code source",
+        site: "Voir le site",
       },
     },
   },

@@ -2,6 +2,7 @@
         {
             "id": 1,
             "Name": "Midpoint",
+            "Url": "https://www.midpoint.world/",
             "Description": "This site is a flight searching site that helps travelers find the best midpoint destinations for meeting up with friends and family. The app also shows the cheapest locations as well as the fastest destinations to travel to while showing the travel time split for each traveler.",
             "DescriptionFR": "Ce site est un site de recherche de vols qui aide les voyageurs à trouver les meilleures destinations intermédiaires pour se retrouver entre amis ou en famille. L'application indique également les lieux les moins chers ainsi que les destinations les plus rapides tout en montrant la durée du voyage pour chaque voyageur.",
             "TechStack": ["JavaScript", "PostgreSQL", "Redis", "Rails"],
@@ -17,8 +18,9 @@
         {
             "id": 2, 
             "Name": "Spaces",
-            "Description": "A Rails app that can be used to find and book co-working spaces for start ups.",
-            "DescriptionFR": "Bonjour",
+            "Url": "https://spaces-dgraham09-0d4ed9f6ae40.herokuapp.com/",
+            "Description": "A Rails app that can be used to find and book co-working spaces for start ups. The app also allows users to create their own spaces for rental. ",
+            "DescriptionFR": "Une application fabriqué avec Rails qui peut être utilisée pour trouver et réserver des espaces de travail pour les start-ups. L'application permet également aux utilisateurs de créer leurs propres espaces à louer.",
             "TechStack": ["Rails", "JavaScript", "PostgreSQL"],
             "Images" : [
                 "/images/spaces/spaces.png",
@@ -31,8 +33,10 @@
         {
             "id": 3,
             "Name": "Movie-Minder",
-            "Description": "Web App to help you keep track of and group any movies that you enjoyed.",
+            "Url": null, 
+            "Description": "Web App to help you keep track of and group any movies that you enjoyed. The site also shows upcoming movies so you can plan your next trip to the cinema!",
             "TechStack": ["Rails", "PostgreSQL", "JavaScript"],
+            "DescriptionFR": "Web App pour vous aider à suivre et à regrouper les films que vous avez aimés. Le site affiche également les films à venir afin que vous puissiez planifier votre prochaine sortie au cinéma!",
             "Images": [
                 "/images/movieMinder/movie_minder.png",
                 "/images/movieMinder/movie_minder_search_results.png",
@@ -43,7 +47,9 @@
         {
             "id": 4,
             "Name": "FindYourHat",
+            "Url": null, 
             "Description": "A fun terminal game where a user is tasked with finding their hat while avoiding hidden holes!",
+            "DescriptionFR": "Un jeu de terminal amusant où l'utilisateur doit trouver son chapeau tout en évitant les trous cachés!",
             "TechStack": ["NodeJS"],
             "Images": [
                 "/images/findhat/findYourHat.png"

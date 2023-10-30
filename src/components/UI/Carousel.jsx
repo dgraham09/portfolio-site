@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 import Glide from '@glidejs/glide'
-// Required Core Stylesheet
+
 
 const CarouselContainer = (props) => {
 

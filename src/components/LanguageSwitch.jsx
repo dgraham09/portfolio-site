@@ -1,7 +1,5 @@
 import { useTranslation, Trans } from "react-i18next";
 import { useState, useRef } from "react";
-import english from "../assets/english.png";
-import ReactCountryFlag from "react-country-flag";
 import Dropdown from "react-bootstrap/Dropdown";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 

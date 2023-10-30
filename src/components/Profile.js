@@ -90,7 +90,7 @@ const Profile = () => {
                 </div>
                 <div className="mt-4 flex flex-row justify-center items-center">
                   <img src={french} className="language" alt="french"></img>
-                  <p className="grow text-start ms-8">B2: Intermediate</p>
+                  <p className="grow text-start ms-8">B2: Intermediate </p>
                 </div>
               </div>
             </div>

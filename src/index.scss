@@ -303,7 +303,7 @@ a {
   z-index: 2;
   height: 300px;
   width: 50vw;
-  height: 500px;
+  height: 10em;
   border-radius: 40px;
   margin-top: 1em;
   animation: float 4s ease-in-out infinite;
@@ -323,13 +323,13 @@ a {
   background-size: cover;
   background-repeat: no-repeat ;
   border-radius: 36px;
-  min-height: 100%;
+  min-height: 10em;
 }
 
 
 
 .view-button {
-  margin: 200px auto;
+  margin: 6em auto;
   background-color: rgb(130, 30, 253);
   color: white;
   height: 3em;
@@ -476,6 +476,8 @@ img:hover {
     width: 3em;
   }
 
+
+
   .project-thumbnail {
     height: 8em;
   }
@@ -590,10 +592,8 @@ img:hover {
     font-size: 20px;
   }
 
-  .project-thumbnail {
-    height: 10em;
-    width: 20em;
-    min-height: fit-content;
+  .card {
+    height: 8em;
   }
 
   .card {
@@ -700,6 +700,11 @@ img:hover {
 }
 
 @media only screen and (max-width: 710px) {
+
+  .card {
+    height: 6em;
+    width: 10em;
+  }
   .project-thumbnail {
     height: 6em;
     width: 10em;
@@ -803,6 +808,16 @@ img:hover {
 
 @media only screen and (max-width: 495px) {
 
+  .card {
+    height: 4em;
+    width: 6em;
+  }
+  .project-thumbnail {
+    height: 4em;
+    width: 6em;
+    min-height: fit-content;
+  }
+
   .project-languages {
     display: none;
   }
@@ -824,15 +839,15 @@ img:hover {
   left: 0.25em;
 }
 
-.item-background {
-  inset: -81px auto auto 54px !important;
-  margin-right: 8em;
-  padding: 0.1em;
-  width: 3em;
-  height: 6em;
-  .dropDownIcon {
-    height: 1em;
-    width: 1em;
-  }
-};
+  .item-background {
+    inset: -81px auto auto 54px !important;
+    margin-right: 8em;
+    padding: 0.1em;
+    width: 3em;
+    height: 6em;
+    .dropDownIcon {
+      height: 1em;
+      width: 1em;
+    }
+  };
 }

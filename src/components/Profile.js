@@ -12,21 +12,9 @@ import DavidGrahamCV from "../components/data/DavidGrahamCV.pdf";
 import { Fragment } from "react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitch";
-import { motion, useScroll, useTransform } from "framer-motion";
 
 const Profile = () => {
   const { t, i18n } = useTranslation();
-  const { scrollY } = useScroll();
-  const introOpacity = useTransform(
-    scrollY,
-    [0, 5, 25, 50, 75, 80],
-    [1, 0.8, 0.6, 0.4, 0.2, 0]
-  );
-  const bioOpacity = useTransform(
-    scrollY,
-    [85, 150, 210, 280, 320, 360],
-    [0, 0.2, 0.4, 0.6, 0.8, 1]
-  );
 
   return (
     <main>
@@ -99,20 +87,16 @@ const Profile = () => {
         </aside>
         <section class="col-start-2 col-end-10">
           <div className="col-span-3 ms-20">
-            <motion.div
-              style={{ opacity: introOpacity }}
-              className="w-full h-80"
-            >
+            <div className="w-full">
               <h1 className="text-left mt-24 my-12  w-full">{t("intro")}</h1>
               <p className="text-left w-8/12">{t("profile")}</p>
-              <p className="text-left mt-8">{t("scroll")}</p>
-            </motion.div>
+            </div>
             <LanguageSwitcher />
             <Fragment className="scroll-container">
               <Fragment className="icon-scroll"></Fragment>
             </Fragment>
             <section>
-              <motion.div style={{ opacity: bioOpacity }} className="w-8/12">
+              <div className="w-8/12">
                 <p className="text-left">
                   <h3 className="underline my-6">{t("aboutMe")}</h3>
                   <p>{t("experience")}</p>
@@ -139,13 +123,13 @@ const Profile = () => {
                   <LanguagesList />
                   <p class="mt-10">{t("relationships")}</p>
                 </p>
-              </motion.div>
-              <motion.div>
+              </div>
+              <div>
                 <p className="text-left">
                   <h3 className="underline my-10">{t("project")}</h3>
                   <Projects />
                 </p>
-              </motion.div>
+              </div>
             </section>
           </div>
         </section>

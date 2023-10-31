@@ -8,9 +8,9 @@
 // Optional Theme Stylesheet
 @import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
 
-// * {
-//   border: 1px solid red;
-// }
+* {
+  border: 1px solid red;
+}
 
 
 main {
@@ -31,7 +31,7 @@ body {
   color: white;
   font-family: 'Montserrat';
   letter-spacing: 0.1em;
-  height: 100vh;
+
 }
 
 .intro {
@@ -119,7 +119,7 @@ a {
 
 .language-switcher {
   position: absolute;
-  left: 82vw;
+  left: 83vw;
   top: 26vh;
 }
 
@@ -795,9 +795,13 @@ img:hover {
     width: 1em;
   }
 };
+
+.language-switcher {
+  display: none;
+}
 }
 
-@media only screen and (max-width: 493px) {
+@media only screen and (max-width: 495px) {
 
   .project-languages {
     display: none;
@@ -815,7 +819,9 @@ img:hover {
 }
 
 .dropdownToggle {
-  margin-left: -4em;
+  position: absolute;
+  bottom: 3em;
+  left: 0.25em;
 }
 
 .item-background {

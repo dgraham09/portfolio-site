@@ -9,6 +9,7 @@ import cv from "../assets/cv.png";
 import LanguagesList from "./UI/LanguagesList";
 import Projects from "./Projects";
 import DavidGrahamCV from "../components/data/DavidGrahamCV.pdf";
+import { Fragment } from "react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitch";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -23,7 +24,7 @@ const Profile = () => {
   );
   const bioOpacity = useTransform(
     scrollY,
-    [90, 150, 210, 280, 320, 360],
+    [85, 150, 210, 280, 320, 360],
     [0, 0.2, 0.4, 0.6, 0.8, 1]
   );
 
@@ -100,16 +101,16 @@ const Profile = () => {
           <div className="col-span-3 ms-20">
             <motion.div
               style={{ opacity: introOpacity }}
-              className="w-full h-96"
+              className="w-full h-80"
             >
               <h1 className="text-left mt-24 my-12  w-full">{t("intro")}</h1>
               <p className="text-left w-8/12">{t("profile")}</p>
               <p className="text-left mt-8">{t("scroll")}</p>
             </motion.div>
             <LanguageSwitcher />
-            <div className="scroll-container">
-              <div className="icon-scroll"></div>
-            </div>
+            <Fragment className="scroll-container">
+              <Fragment className="icon-scroll"></Fragment>
+            </Fragment>
             <section>
               <motion.div style={{ opacity: bioOpacity }} className="w-8/12">
                 <p className="text-left">

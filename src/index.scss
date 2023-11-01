@@ -55,9 +55,109 @@ body {
   transform: rotate(90deg);
 }
 
-/* #007bff transparent */
+.container-intro {
 
-/* color: rgb(193, 191, 191); */
+  will-change: contents;
+  z-index: 1;
+  height: 100%;
+  width: 90%;
+  transform-style: preserve-3d;
+  animation: fadeIn 1s forwards;
+  animation-delay: 1s;
+  opacity: 0;
+
+  h2 {
+    color: rgb(206, 67, 159);
+    font-weight: 800;
+    animation: fadeIn 1s 1.8s backwards;
+  }
+
+  .text-zone {
+    width: 90%;
+
+  }
+
+  .container-intro span {
+    font-size: 6em;
+    font-weight: 900;
+  }
+
+  h1 {
+    font-size: 5em;
+    font-weight: 900;
+    &::before {
+      content: "<h1>";
+      font-family: "La Belle Aurore";
+      color: rgb(130, 30, 253);
+      height: 2em;
+      position: absolute;
+      margin-top: -1em;
+      left: -0.8em;
+      opacity: 0.6;
+
+    }
+
+    &::after {
+      content: "<h1>";
+      font-family: "La Belle Aurore";
+      color: rgb(130, 30, 253);
+      height: 2em;
+      position: absolute;
+      margin-top: 2.5em;
+      left: -0.8em;
+      // animation: fadeIn 1s 1.7s backwards;
+      opacity: 0.6;
+
+    }
+    
+    .initial {
+      width: 6em;
+      height: 6em;
+      position: absolute;
+      top: -6%;
+      margin-right: 10em;
+      animation: rotateIn 1s linear both;
+      animation-delay: 1.4s;
+      z-index: -1;
+    }
+
+ 
+  }
+
+  .namesplit {
+    margin-left: 2.1em;
+  }
+
+  .roles {
+    width: 100%;
+  }
+
+}
+
+.text-animate {
+  display: inline-block;
+  opacity: 0;
+  animation: bounceIn 1s 1s;
+  animation-fill-mode: forwards;
+  min-width: 12px;
+}
+
+.text-animate-hover {
+  display: inline-block;
+  animation-fill-mode: both;
+
+  &:hover {
+    animation: rubberBand 1s;
+    color: rgb(130, 30, 253)
+  }
+
+}
+@for $i from 1 through 35 {
+  .text-animate._#{$i} {
+    animation-delay: #{$i / 10}s;
+  }
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -87,13 +187,15 @@ code {
 }
 
 h1 {
-  font-size: 48px;
+  // font-size: 48px;
+  font-weight: 900;
   line-height: 2em;
   text-align: center;
 }
 
 h2 {
-  font-size: 42px;
+  font-size: 2.5em;
+  font-weight: 900;
 }
 
 h3 {
@@ -140,8 +242,6 @@ a {
   top: 0;
 }
 
-/* rgb(130, 30, 253) */
-
 .icon-scroll:before {
   content: '';
   width: 30px;
@@ -164,6 +264,36 @@ a {
   position: sticky;
   top: 20vh;
   left: 85vw;
+}
+
+.AboutMe {
+  
+  &::before {
+  content: "<body>";
+  font-family: "La Belle Aurore";
+  color: rgb(130, 30, 253);
+  height: 30em;
+  font-size: 5em;
+  position: absolute;
+  font-weight: bold;
+  top: 100%;
+  left: 26%;
+  opacity: 0.6;
+
+}
+
+&::after {
+  content: "<body>";
+  font-family: "La Belle Aurore";
+  color: rgb(130, 30, 253);
+  height: 2em;
+  position: absolute;
+  margin-top: 1em;
+  left: -0.8em;
+  // animation: fadeIn 1s 1.7s backwards;
+  opacity: 1;
+
+  }
 }
 
 .languages-container {

@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@glidejs/glide": "^3.6.0",
     "@material-tailwind/react": "^2.1.4",
     "@popperjs/core": "^2.11.8",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "animate.css": "^4.1.1",
     "bootstrap": "^5.3.2",
     "classnames": "^2.3.2",
     "flag-icons": "^6.11.1",
@@ -32,9 +34,8 @@
     "tw-elements": "^1.0.0",
     "web-vitals": "^2.1.4"
   },
-
   "scripts": {
-    "start": "serve -s build",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

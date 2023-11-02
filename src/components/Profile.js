@@ -114,13 +114,11 @@ const Profile = () => {
                     strArray={nameArray}
                     idx={15}
                   />
-                  {/* <span className="namesplit">avid</span> */}
                 </h1>
                 <h2 className="text-left roles">
                   Junior Full Stack Developer / React Developer
                 </h2>
               </div>
-              {/* <h1 className="text-left mt-24 my-12  w-full">{t("intro")}</h1> */}
             </div>
             <div>
               <p className="text-left w-8/12 mt-72">{t("profile")}</p>

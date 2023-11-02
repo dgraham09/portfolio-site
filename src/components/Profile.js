@@ -121,7 +121,7 @@ const Profile = () => {
               </div>
             </div>
             <div>
-              <p className="text-left w-8/12 mt-72">{t("profile")}</p>
+              <p className="text-left w-8/12 mt-80">{t("profile")}</p>
             </div>
             <LanguageSwitcher />
             <div className="scroll-container">

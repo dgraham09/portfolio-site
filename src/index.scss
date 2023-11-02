@@ -275,6 +275,7 @@ a {
   font-size: 5em;
   position: absolute;
   font-weight: bold;
+  animation: fadeIn 1s 2s backwards;
   top: 85%;
   left: 26%;
   opacity: 0.6;
@@ -556,6 +557,10 @@ img:hover {
   padding-top: 0.3em;
 }
 
+.aboutMe-container {
+  margin-top: 20rem;
+}
+
 
 @keyframes scroll {
   0% {
@@ -636,7 +641,7 @@ img:hover {
   }
 
     .AboutMe::before  {
-    top: 135%;
+    top: 132%;
     left: 30%;
   }
 

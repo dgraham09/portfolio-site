@@ -6,15 +6,28 @@ import linkedin from "../assets/linkedin.png";
 import github from "../assets/github.png";
 import gmail from "../assets/gmail.png";
 import cv from "../assets/cv.png";
+import InitialLogo from "../assets/Initial_logo.png";
 import LanguagesList from "./UI/LanguagesList";
 import Projects from "./Projects";
 import DavidGrahamCV from "../components/data/DavidGrahamCV.pdf";
-import { Fragment } from "react";
+import { Fragment, useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitch";
+import AnimatedLetters from "./UI/AnimatedLetters";
 
 const Profile = () => {
   const { t, i18n } = useTranslation();
+  const [letterClass, setLetterClass] = useState("text-animate");
+  const nameArray = ["a", "v", "i", "d"];
+
+  useEffect(() => {
+    const timeOutId = setTimeout(() => {
+      setLetterClass("text-animate-hover");
+    }, 4000);
+    return () => {
+      clearTimeout(timeOutId);
+    };
+  }, []);
 
   return (
     <main>
@@ -38,13 +51,13 @@ const Profile = () => {
                   className="language"
                   alt="linkedin icon"
                 ></img>
-                <p className="grow text-start ms-8">
+                <p className="grow text-start ms-8 ">
                   <a href="https://www.linkedin.com/in/dgraham3/">
                     {t("linkedin")}
                   </a>
                 </p>
               </div>
-              <div className="mt-4 flex flex-row justify-start items-center">
+              <div className="mt-4 flex flex-row justify-start items-center cv">
                 <img src={cv} className="language" alt="cv"></img>
                 <p className="grow text-start ms-8">
                   <a
@@ -57,7 +70,7 @@ const Profile = () => {
                   </a>
                 </p>
               </div>
-              <div className="mt-4 flex flex-row justify-start items-center">
+              <div className="mt-4 flex flex-row justify-start items-center github">
                 <img src={github} className="language" alt="github"></img>
                 <p className="grow text-start ms-8">
                   <a href="https://github.com/dgraham09">{t("github")}</a>
@@ -86,16 +99,35 @@ const Profile = () => {
           </div>
         </aside>
         <section class="col-start-2 col-end-10">
-          <div className="col-span-3 ms-20">
-            <div className="w-full">
-              <h1 className="text-left mt-24 my-12  w-full">{t("intro")}</h1>
-              <p className="text-left w-8/12">{t("profile")}</p>
+          <div className="col-span-3 ms-32">
+            <div className="container-intro my-36">
+              <div className="text-zone">
+                <h1 className="text-left greeting">
+                  <span className={letterClass}>H</span>
+                  <span className={`${letterClass} _12`}>i,</span>
+                  <br />
+                  <span className={`${letterClass} _13`}>I</span>
+                  <span className={`${letterClass} _14`}>'m</span>
+                  <img src={InitialLogo} className="initial" alt="initial" />
+                  <AnimatedLetters
+                    letterClass={letterClass}
+                    strArray={nameArray}
+                    idx={15}
+                  />
+                </h1>
+                <h2 className="text-left roles">
+                  Junior Full Stack Developer / React Developer
+                </h2>
+              </div>
+            </div>
+            <div>
+              <p className="text-left w-8/12 mt-72">{t("profile")}</p>
             </div>
             <LanguageSwitcher />
-            <Fragment className="scroll-container">
-              <Fragment className="icon-scroll"></Fragment>
-            </Fragment>
-            <section>
+            <div className="scroll-container">
+              <div className="icon-scroll"></div>
+            </div>
+            <section className="AboutMe">
               <div className="w-8/12">
                 <p className="text-left">
                   <h3 className="underline my-6">{t("aboutMe")}</h3>
@@ -124,7 +156,7 @@ const Profile = () => {
                   <p class="mt-10">{t("relationships")}</p>
                 </p>
               </div>
-              <div>
+              <div className="project-container">
                 <p className="text-left">
                   <h3 className="underline my-10">{t("project")}</h3>
                   <Projects />

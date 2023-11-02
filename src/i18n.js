@@ -10,7 +10,7 @@ i18next.use(initReactI18next).init({
           "Former Product Owner who has made the switch to Full Stack development",
         intro: "Hi, I'm David. Nice to meet you!",
         profile:
-          "I'm a junior full stack developer with a strong strategic mindset who develops web applications to solve challenging problems. When I’m not at the computer, I’m usually running or doing some kind of exercise and exploring Paris.",
+          "Nice to meet you! I'm a junior full stack developer with a strong strategic mindset who develops web applications to solve challenging problems. When I’m not at the computer, I’m usually running or doing some kind of exercise and exploring Paris.",
         scroll: "Scroll to learn a little more....",
         aboutMe: "About me",
         experience:

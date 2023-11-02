@@ -633,6 +633,15 @@ img:hover {
   .project-languages {
     width: 60%;
   }
+
+    .AboutMe::before  {
+    top: 135%;
+    left: 30%;
+  }
+
+  .container-intro h1::before, .container-intro h1::after {
+    left: -0.5em;
+  }
 }
 
 @media only screen and (max-width: 1266px) {
@@ -1205,9 +1214,10 @@ img:hover {
   .container-intro h1 {
 
     .initial {
-      left: -1%;
-      height: 1.5em;
-      width: 1.5em;
+      left: 15%;
+      top: 40%;
+      height: 1em;
+      width: 1em;
     }
   }
 }

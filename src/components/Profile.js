@@ -51,13 +51,13 @@ const Profile = () => {
                   className="language"
                   alt="linkedin icon"
                 ></img>
-                <p className="grow text-start ms-8">
+                <p className="grow text-start ms-8 ">
                   <a href="https://www.linkedin.com/in/dgraham3/">
                     {t("linkedin")}
                   </a>
                 </p>
               </div>
-              <div className="mt-4 flex flex-row justify-start items-center">
+              <div className="mt-4 flex flex-row justify-start items-center cv">
                 <img src={cv} className="language" alt="cv"></img>
                 <p className="grow text-start ms-8">
                   <a
@@ -70,7 +70,7 @@ const Profile = () => {
                   </a>
                 </p>
               </div>
-              <div className="mt-4 flex flex-row justify-start items-center">
+              <div className="mt-4 flex flex-row justify-start items-center github">
                 <img src={github} className="language" alt="github"></img>
                 <p className="grow text-start ms-8">
                   <a href="https://github.com/dgraham09">{t("github")}</a>
@@ -100,7 +100,7 @@ const Profile = () => {
         </aside>
         <section class="col-start-2 col-end-10">
           <div className="col-span-3 ms-32">
-            <div className="container-intro my-44">
+            <div className="container-intro my-36">
               <div className="text-zone">
                 <h1 className="text-left greeting">
                   <span className={letterClass}>H</span>
@@ -123,7 +123,7 @@ const Profile = () => {
               {/* <h1 className="text-left mt-24 my-12  w-full">{t("intro")}</h1> */}
             </div>
             <div>
-              <p className="text-left w-8/12 mt-96">{t("profile")}</p>
+              <p className="text-left w-8/12 mt-72">{t("profile")}</p>
             </div>
             <LanguageSwitcher />
             <div className="scroll-container">
@@ -158,7 +158,7 @@ const Profile = () => {
                   <p class="mt-10">{t("relationships")}</p>
                 </p>
               </div>
-              <div>
+              <div className="project-container">
                 <p className="text-left">
                   <h3 className="underline my-10">{t("project")}</h3>
                   <Projects />

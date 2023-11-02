@@ -8,18 +8,18 @@ const Projects = (props) => {
   const { t } = useTranslation();
   return ProjectData.map((project, index) => {
     return (
-        <Card key={index}>
-          <div className={`flex project-thumbnail ${project.Name}`}>
-            <Link
-              to={`projects/${project.id}`}
-              class="view-button"
-              onMouseEnter={props.onMouseEnter}
-              onMouseLeave={props.onMouseLeave}
-            >
-              {t('click')}
-            </Link>
-          </div>
-        </Card>
+      <Card key={index}>
+        <div className={`flex project-thumbnail ${project.Name}`}>
+          <Link
+            to={`projects/${project.id}`}
+            class="view-button"
+            onMouseEnter={props.onMouseEnter}
+            onMouseLeave={props.onMouseLeave}
+          >
+            {t("click")}
+          </Link>
+        </div>
+      </Card>
     );
   });
 };

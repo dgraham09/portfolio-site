@@ -84,7 +84,7 @@ body {
 
   h1 {
     font-size: 5em;
-    font-weight: 900;
+    font-weight: 800;
     &::before {
       content: "<h1>";
       font-family: "La Belle Aurore";
@@ -103,7 +103,7 @@ body {
       color: rgb(130, 30, 253);
       height: 2em;
       position: absolute;
-      margin-top: 2.5em;
+      margin-top: 3.25em;
       left: -0.8em;
       // animation: fadeIn 1s 1.7s backwards;
       opacity: 0.6;
@@ -177,8 +177,8 @@ code {
 }
 
 .dropdownToggle .flagIcon, .flagIcon {
-  height: 4em;
-  width: 4em;
+  height: 5em;
+  width: 5em;
   
 }
 
@@ -187,7 +187,6 @@ code {
 }
 
 h1 {
-  // font-size: 48px;
   font-weight: 900;
   line-height: 2em;
   text-align: center;
@@ -222,7 +221,7 @@ a {
 .language-switcher {
   position: absolute;
   left: 83vw;
-  top: 35vh;
+  top: 30vh;
 }
 
 .icon-scroll, .icon-scroll:before, .resume {
@@ -276,24 +275,11 @@ a {
   font-size: 5em;
   position: absolute;
   font-weight: bold;
-  top: 100%;
+  top: 99%;
   left: 26%;
   opacity: 0.6;
 
 }
-
-&::after {
-  content: "<body>";
-  font-family: "La Belle Aurore";
-  color: rgb(130, 30, 253);
-  height: 2em;
-  position: absolute;
-  margin-top: 1em;
-  left: -0.8em;
-  // animation: fadeIn 1s 1.7s backwards;
-  opacity: 1;
-
-  }
 }
 
 .languages-container {
@@ -305,6 +291,14 @@ a {
   border: 4px solid rgb(130, 30, 253);
   padding: 1.5em;
   border-radius: 40px;
+}
+
+.cv {
+  animation: pulse 1s 10s;
+}
+
+.github {
+  animation: pulse 1s 16s;
 }
 
 .bio-text, .languages-container p, .details-container p{
@@ -329,6 +323,21 @@ a {
   box-shadow: 4px 4px 15px 2px rgb(130, 30, 253);
 }
 
+.project-container {
+
+  &::after {
+    content: "</body>";
+    font-family: "La Belle Aurore";
+    color: rgb(130, 30, 253);
+    height: 0.1em;
+    font-size: 5em;
+    position: absolute;
+    left: 22%;
+    z-index: 2;
+    opacity: 0.6;
+    }
+}
+
 .project-languages {
   padding: 1.5em;
   border-radius: 40px;
@@ -350,6 +359,7 @@ a {
 }
 
 .projectInfoCard h1 {
+  font-size: 3em;
   margin: 0.5em;
 }
 .projectInfoCard p {
@@ -529,6 +539,7 @@ img:hover {
 
 
 .footer {
+  margin-top: 8em;
   min-height: 12vh;
   width: 100%;
   background-color: rgb(130, 30, 253);
@@ -639,6 +650,60 @@ img:hover {
 
   .intro {
     width: 65%
+  }
+
+  .text-zone span {
+    font-size: 0.75em;
+  }
+
+  .container-intro {
+    margin-top: 3em;
+    margin-bottom: 2em;
+  }
+
+
+
+  .container-intro h1 {
+    
+    .initial {
+      height: 4em;
+      width: 4em;
+      position: absolute;
+      top: 17%
+    }
+
+    .namesplit {
+      margin-left: 1.6em;
+    }
+  
+  }
+
+  .container-intro h1::before, .container-intro h1::after {
+    font-size: 0.75em;
+  }
+
+
+  .container-intro h1::after {
+    margin-top: 4.5em;
+  }
+
+  .AboutMe {
+    margin-top: 1em !important;
+  }
+
+  .AboutMe::before, .project-container::after {
+    font-size: 4em;
+  }
+
+  .AboutMe::before  {
+    top: 125%;
+    left: 30%;
+  }
+
+  
+
+  .roles {
+    font-size: 1.75em;
   }
 
   h4 {
@@ -781,9 +846,6 @@ img:hover {
     min-height: fit-content;
   }
 
-
-
-
 }
 
 @media only screen and (max-width: 870px) {
@@ -860,6 +922,39 @@ img:hover {
     font-size: 0.5em;
   }
 
+  .text-zone span {
+    font-size: 0.65em;
+  }
+
+  .container-intro h1 {
+
+    &::after {
+      margin-top: 3.5em;
+    }
+
+    line-height: 1.4em;
+
+    .initial {
+      height: 3em;
+      width: 3em;
+      position: absolute;
+      top: 18%;
+      left:7%;
+    }
+  };
+
+  .AboutMe::before  {
+    top: 102%;
+    left: 30%;
+  }
+
+  .container-intro h2 {
+      font-size: 1.25em;
+  }
+
+  .greeting h1 {
+    line-height: 1em;
+  }
 
   aside {
     width: 10em;
@@ -893,8 +988,6 @@ img:hover {
   .languages-list-container {
     flex-wrap: wrap;
   }
-
-
 
   .scroll-container {
     display: none;
@@ -950,7 +1043,73 @@ img:hover {
 }
 }
 
-@media only screen and (max-width: 495px) {
+@media only screen and (max-width: 570px ) {
+  .text-zone span {
+    font-size: 0.55em;
+  }
+
+  .container-intro {
+    margin-top: 5em;
+    margin-bottom: 2em;
+  }
+
+  .AboutMe::before  {
+    top: 95%;
+    left: 30%;
+  }
+
+  .container-intro h1 {
+    line-height: 1em;
+
+    .initial {
+      top: 25%;
+      left: 15%;
+      height: 2em;
+      width: 2em;
+    }
+    .namesplit {
+      margin-left: 1.5em;
+    }
+  }
+
+
+  .container-intro h2 {
+    font-size: 1em;
+}
+
+}
+
+@media only screen and (max-width: 490px) {
+
+  .text-zone span {
+    font-size: 0.35em;
+  }
+
+  
+  .container-intro h1 {
+    line-height: 1em;
+
+    .initial {
+      top: 36%;
+      left: 10%;
+      height: 1.5em;
+      width: 1.5em;
+    }
+    .namesplit {
+      margin-left: 1.65em;
+    }
+  }
+
+  .container-intro h2 {
+    font-size: 0.85em;
+}
+
+  
+  .AboutMe::before  {
+    top: 70%;
+    left: 30%;
+  }
+
 
   .card {
     height: 4em;
@@ -1001,4 +1160,60 @@ img:hover {
       width: 1em;
     }
   };
+}
+
+@media only screen and (max-width: 489px) {
+  .AboutMe::before  {
+    top: 100%;
+    left: 30%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .AboutMe::before  {
+    top: 100%;
+    left: 30%;
+  }
+
+  .container-intro h1 {
+
+    .initial {
+      top: 32%;
+      left: 11%;
+      height: 1.5em;
+      width: 1.5em;
+    }
+  }
+}
+
+@media only screen and (max-width: 375px) {
+
+  .container-intro h1::before, .container-intro h1::after {
+    font-size: 0.55em;
+  }
+
+  .container-intro h1::after {
+    margin-top: 5.5em;
+  }
+
+  .AboutMe::before, .project-container::after {
+    font-size: 2em;
+  }
+
+  .text-zone span {
+    font-size: 0.25em;
+  }
+  .AboutMe::before  {
+    top: 108%;
+    left: 46%;
+  }
+
+  .container-intro h1 {
+
+    .initial {
+      left: -1%;
+      height: 1.5em;
+      width: 1.5em;
+    }
+  }
 }
